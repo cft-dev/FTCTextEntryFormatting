@@ -9,6 +9,7 @@
 
 @protocol FTCMaskFormatterConfig;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCMaskFormatter : NSObject<FTCTextEntryFormatter>
 
@@ -17,3 +18,5 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END

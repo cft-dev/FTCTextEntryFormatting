@@ -1,6 +1,6 @@
 //
-// Created by Denis Morozov on 15/05/15.
-// Copyright (c) 2015 FTC. All rights reserved.
+// Created by Дирша Андрей Александрович on 09.11.16.
+// Copyright (c) 2016 FTC. All rights reserved.
 //
 
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FTCDigitsValueFilter : NSObject<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>
+@interface MobilePhoneInputFilter : NSObject<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>
 
 @property (nonatomic, readonly) NSUInteger maxLength;
 

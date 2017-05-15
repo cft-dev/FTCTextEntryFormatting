@@ -3,6 +3,7 @@
 // Copyright (c) 2015 CFT. All rights reserved.
 //
 
+NS_ASSUME_NONNULL_BEGIN
 
 @protocol FTCMaskFormatterConfig<NSObject>
 
@@ -11,3 +12,5 @@
 @property (nonatomic, readonly) BOOL cutTail;
 
 @end
+
+NS_ASSUME_NONNULL_END
