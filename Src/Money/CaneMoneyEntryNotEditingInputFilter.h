@@ -9,6 +9,7 @@
 
 @class MoneyType;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface CaneMoneyEntryNotEditingInputFilter : NSObject<FTCTextEntryNotEditingInputFilter>
 
@@ -17,3 +18,5 @@
 - (instancetype)init;
 
 @end
+
+NS_ASSUME_NONNULL_END

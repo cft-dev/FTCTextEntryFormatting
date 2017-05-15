@@ -9,14 +9,24 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol FTCTextEntryUI<NSObject>
+@protocol FTCTextEntry;
+
+@protocol FTCTextEntryDelegate<NSObject>
+
+- (void)textEntryDidBeginEditing:(id<FTCTextEntry>)textEntry NS_SWIFT_NAME( textEntryDidBeginEditing(_:) );
+- (BOOL)textEntry:(id<FTCTextEntry>)textEntry shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)replacement NS_SWIFT_NAME( textEntry(_:shouldChangeCharactersIn:replacementString:) );
+- (void)textEntryDidEndEditing:(id<FTCTextEntry>)textEntry NS_SWIFT_NAME( textEntryDidEndEditing(_:) );
+
+@end
+
+@protocol FTCTextEntry<NSObject>
 
 @property (nonatomic, strong, nullable) NSString *text;
 
 @property (nonatomic, assign) NSRange selectedTextRange;
 
-- (void)addDelegate:(id<UITextFieldDelegate>)delegate;
-- (void)removeDelegate:(id<UITextFieldDelegate>)delegate;
+- (void)addDelegate:(id<FTCTextEntryDelegate>)delegate NS_SWIFT_NAME( addDelegate(_:) );
+- (void)removeDelegate:(id<FTCTextEntryDelegate>)delegate NS_SWIFT_NAME( removeDelegate(_:) );
 
 @end
 
@@ -29,9 +39,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, nullable, readonly) NSString *formattedValue;
 
-- (instancetype)initWithUI:(id<FTCTextEntryUI>)textEntryUI;
+- (instancetype)initWithUI:(id<FTCTextEntry>)textEntryUI;
 
-- (void)applyFormattingConfig:(FTCTextEntryFormattingConfig *)config;
+- (void)applyFormattingConfig:(FTCTextEntryFormattingConfig *)config NS_SWIFT_NAME( apply(formattingConfig:) );
 
 @end
 

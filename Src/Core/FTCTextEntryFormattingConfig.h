@@ -8,6 +8,7 @@
 @protocol FTCTextEntryEditingInputFilter;
 @protocol FTCTextEntryNotEditingInputFilter;
 
+NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCTextEntryFormattingConfig : NSObject
 
@@ -22,3 +23,5 @@
 - (instancetype)init;
 
 @end
+
+NS_ASSUME_NONNULL_END

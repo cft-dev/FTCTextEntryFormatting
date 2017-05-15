@@ -8,20 +8,20 @@
 #import "FTCTextEntryFormattingConfig.h"
 
 
-@interface CaneTextEntryFormatCoordinatorHelper ()<UITextFieldDelegate>
+@interface CaneTextEntryFormatCoordinatorHelper ()<FTCTextEntryDelegate>
 
 @end
 
 @implementation CaneTextEntryFormatCoordinatorHelper
 {
-	id<FTCTextEntryUI> __weak entryUI;
+	id<FTCTextEntry> __weak entryUI;
 
 	FTCTextEntryFormatCoordinator *formatCoordinator;
 
     FTCTextEntryFormattingConfig *currentConfig;
 }
 
-- (instancetype)initWithUI:(id<FTCTextEntryUI>)anEntryUI
+- (instancetype)initWithUI:(id<FTCTextEntry>)anEntryUI
 {
 	assert( nil != anEntryUI );
 
@@ -63,7 +63,7 @@
 	return formatCoordinator.formattedValue;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+- (void)textEntryDidBeginEditing:(id<FTCTextEntry>)textEntry
 {
 	[self handleValueChange:^
 	{
@@ -73,7 +73,7 @@
 	}];
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)replacement
+- (BOOL)textEntry:(id<FTCTextEntry>)textEntry shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)replacement
 {
 	[self handleValueChange:^
 	{
@@ -85,7 +85,7 @@
 	return NO;
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
+- (void)textEntryDidEndEditing:(id<FTCTextEntry>)textEntry
 {
 	[self handleValueChange:^
 	{
