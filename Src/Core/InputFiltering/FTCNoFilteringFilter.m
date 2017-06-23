@@ -3,10 +3,8 @@
 // Copyright (c) 2015 CFT. All rights reserved.
 //
 
-
 #import "FTCNoFilteringFilter.h"
 #import "FTCFilteredString.h"
-
 
 @implementation FTCNoFilteringFilter
 

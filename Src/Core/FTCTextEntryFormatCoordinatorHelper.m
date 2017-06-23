@@ -6,7 +6,7 @@
 #import "FTCTextEntryFormatCoordinatorHelper.h"
 #import "FTCTextEntryFormatCoordinator.h"
 #import "FTCTextEntryFormattingConfig.h"
-
+#import "FTCTextEntry.h"
 
 @interface FTCTextEntryFormatCoordinatorHelper ()<FTCTextEntryDelegate>
 
@@ -126,7 +126,7 @@
 
 	entryUI.selectedTextRange = formatCoordinator.currentSelectionRangeInFormattedValue;
 
-    currentConfig = config;
+	currentConfig = config;
 }
 
 @end

@@ -3,14 +3,12 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCTextEntryFormatCoordinator.h"
 #import "FTCTextEntryFormatter.h"
 #import "FTCFilteredString.h"
 #import "FTCTextEntryEditingInputFilter.h"
 #import "FTCTextEntryNotEditingInputFilter.h"
 #import "FTCTextEntryFormattingConfig.h"
-
 
 @implementation FTCTextEntryFormatCoordinator
 {

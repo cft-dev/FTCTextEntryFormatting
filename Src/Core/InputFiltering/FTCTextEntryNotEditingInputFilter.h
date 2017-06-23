@@ -3,7 +3,6 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 @protocol FTCTextEntryNotEditingInputFilter<NSObject>
 
 - (NSString *)filterString:(NSString *)string;

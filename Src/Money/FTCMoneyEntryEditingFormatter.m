@@ -7,7 +7,6 @@
 #import "FTCPostfixFormatter.h"
 #import <FTCMoneyType/CurrencyType.h>
 
-
 @implementation FTCMoneyEntryEditingFormatter
 {
 	FTCPostfixFormatter *postfixFormatter;
@@ -59,22 +58,22 @@
 
 - (BOOL)isEqual:(id)object
 {
-    if( nil == object )
-    {
-        return NO;
-    }
+	if( nil == object )
+	{
+		return NO;
+	}
 
-    if( self == object )
-    {
-        return YES;
-    }
+	if( self == object )
+	{
+		return YES;
+	}
 
-    if( NO == [object isKindOfClass:[self class]] )
-    {
-        return NO;
-    }
+	if( NO == [object isKindOfClass:[self class]] )
+	{
+		return NO;
+	}
 
-    return [self isEqualToFormatter:object];
+	return [self isEqualToFormatter:object];
 }
 
 - (BOOL)isEqualToFormatter:(FTCMoneyEntryEditingFormatter *)formatter

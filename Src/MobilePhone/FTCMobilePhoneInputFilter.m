@@ -7,10 +7,7 @@
 #import "FTCFilteredString.h"
 #import "FTCTextEntryFormattingStringUtils.h"
 
-
 @implementation FTCMobilePhoneInputFilter
-{
-}
 
 - (instancetype)initWithMaxLength:(NSUInteger)aLength
 {

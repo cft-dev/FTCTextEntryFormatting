@@ -3,11 +3,9 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCMobilePhoneFormatter.h"
 #import "FTCMaskFormatter.h"
 #import "FTCMobilePhoneFormatterConfig.h"
-
 
 @implementation FTCMobilePhoneFormatter
 {
@@ -54,6 +52,5 @@
 {
 	return [formatter getRangeInRawValueForRange:rangeInFormattedValue inFormattedValue:formattedValue];
 }
-
 
 @end

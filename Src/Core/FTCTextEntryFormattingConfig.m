@@ -3,11 +3,9 @@
 // Copyright (c) 2015 CFT. All rights reserved.
 //
 
-
 #import "FTCTextEntryFormattingConfig.h"
 #import "FTCNoFormattingFormatter.h"
 #import "FTCNoFilteringFilter.h"
-
 
 @implementation FTCTextEntryFormattingConfig
 
@@ -68,7 +66,7 @@
 	BOOL notEditingFormatterEquality = [self.notEditingFormatter isEqual:config.notEditingFormatter];
 	BOOL notEditingInputFormatterEquality = [self.notEditingInputFilter isEqual:config.notEditingInputFilter];
 
-    return editingFormatterEquality && editingInputFormatterEquality && notEditingFormatterEquality && notEditingInputFormatterEquality;
+	return editingFormatterEquality && editingInputFormatterEquality && notEditingFormatterEquality && notEditingInputFormatterEquality;
 }
 
 @end

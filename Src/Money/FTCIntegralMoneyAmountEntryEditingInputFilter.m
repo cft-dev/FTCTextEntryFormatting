@@ -3,7 +3,6 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCIntegralMoneyAmountEntryEditingInputFilter.h"
 #import "FTCTextEntryFormattingStringUtils.h"
 #import "FTCFilteredString.h"
@@ -11,11 +10,7 @@
 #import <FTCMoneyType/MoneyType.h>
 #import <FTCMoneyType/MoneyTypeParser.h>
 
-
 @implementation FTCIntegralMoneyAmountEntryEditingInputFilter
-{
-
-}
 
 - (instancetype)init
 {

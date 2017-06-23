@@ -3,9 +3,7 @@
 // Copyright (c) 2015 CFT. All rights reserved.
 //
 
-
 #import "FTCNoFormattingFormatter.h"
-
 
 @implementation FTCNoFormattingFormatter
 

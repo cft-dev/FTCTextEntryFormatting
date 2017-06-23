@@ -3,7 +3,6 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCMoneyEntryEditingInputFilter.h"
 #import "FTCFilteredString.h"
 #import "FTCTextEntryFormattingStringUtils.h"
@@ -11,14 +10,9 @@
 #import <FTCMoneyType/MoneyType.h>
 #import <FTCMoneyType/MoneyTypeParser.h>
 
-
 static const int MAX_FRACTIONAL_DIGITS = 2;
 
-
 @implementation FTCMoneyEntryEditingInputFilter
-{
-
-}
 
 - (instancetype)init
 {
@@ -113,22 +107,22 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 
 - (BOOL)isEqual:(id)object
 {
-    if( nil == object )
-    {
-        return NO;
-    }
+	if( nil == object )
+	{
+		return NO;
+	}
 
-    if( self == object )
-    {
-        return YES;
-    }
+	if( self == object )
+	{
+		return YES;
+	}
 
-    if( NO == [object isKindOfClass:[self class]] )
-    {
-        return NO;
-    }
+	if( NO == [object isKindOfClass:[self class]] )
+	{
+		return NO;
+	}
 
-    return [self isEqualToFilter:object];
+	return [self isEqualToFilter:object];
 }
 
 - (BOOL)isEqualToFilter:(FTCMoneyEntryEditingInputFilter *)object

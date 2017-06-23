@@ -3,19 +3,14 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCMoneyEntryFormatUtils.h"
 #import "FTCTextEntryFormattingStringUtils.h"
-
 
 static NSString * const EMPTY_STRING = @"";
 static NSString * const ZERO_STRING = @"0";
 static NSString * const DECIMAL_SEPARATORS = @".,";
 
 @implementation FTCMoneyEntryFormatUtils
-{
-
-}
 
 + (NSString *)trimZeroHeadFromString:(NSString * const)string
 {

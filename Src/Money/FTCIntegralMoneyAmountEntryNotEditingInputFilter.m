@@ -3,12 +3,10 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCIntegralMoneyAmountEntryNotEditingInputFilter.h"
 #import "FTCMoneyEntryFormatUtils.h"
 #import <FTCMoneyType/MoneyType.h>
 #import <FTCMoneyType/MoneyTypeParser.h>
-
 
 @implementation FTCIntegralMoneyAmountEntryNotEditingInputFilter
 

@@ -3,11 +3,9 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCMoneyEntryNotEditingFormatter.h"
 #import "FTCPostfixFormatter.h"
 #import <FTCMoneyType/CurrencyType.h>
-
 
 @implementation FTCMoneyEntryNotEditingFormatter
 {

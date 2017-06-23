@@ -3,7 +3,6 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 @interface FTCMoneyEntryFormatUtils : NSObject
 
 + (NSString *)trimZeroHeadFromString:(NSString *const)string;
