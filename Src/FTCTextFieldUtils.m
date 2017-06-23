@@ -3,10 +3,10 @@
 // Copyright (c) 2013 FTC. All rights reserved.
 
 
-#import "TextFieldUtils.h"
+#import "FTCTextFieldUtils.h"
 
 
-@implementation TextFieldUtils
+@implementation FTCTextFieldUtils
 
 + (void)selectTextInTextInput:(id<UITextInput>)textInput atRange:(NSRange)selectionRange
 {
@@ -14,7 +14,7 @@
 
 	const NSUInteger selectionStart = selectionRange.location;
 	const NSUInteger selectionEnd = selectionRange.location + selectionRange.length;
-	[TextFieldUtils selectTextInTextInput:textInput fromIndex:selectionStart toIndex:selectionEnd];
+	[FTCTextFieldUtils selectTextInTextInput:textInput fromIndex:selectionStart toIndex:selectionEnd];
 }
 
 + (void)selectTextInTextInput:(id<UITextInput>)textInput fromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex

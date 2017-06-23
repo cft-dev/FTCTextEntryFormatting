@@ -4,12 +4,12 @@
 //
 
 
-#import "MobilePhoneFormatter.h"
+#import "FTCMobilePhoneFormatter.h"
 #import "FTCMaskFormatter.h"
-#import "MobilePhoneFormatterConfig.h"
+#import "FTCMobilePhoneFormatterConfig.h"
 
 
-@implementation MobilePhoneFormatter
+@implementation FTCMobilePhoneFormatter
 {
 	FTCMaskFormatter *formatter;
 }
@@ -20,7 +20,7 @@
 	return nil;
 }
 
-- (instancetype)initWithConfig:(MobilePhoneFormatterConfig *)aConfig
+- (instancetype)initWithConfig:(FTCMobilePhoneFormatterConfig *)aConfig
 {
 	self = [super init];
 

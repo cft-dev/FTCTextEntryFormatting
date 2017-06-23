@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CaneMoneyEntryNotEditingFormatter : NSObject<FTCTextEntryFormatter>
+@interface FTCMoneyEntryEditingFormatter : NSObject<FTCTextEntryFormatter>
 
 - (instancetype)init NS_UNAVAILABLE;
 

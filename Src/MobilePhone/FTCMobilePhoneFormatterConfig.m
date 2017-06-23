@@ -4,10 +4,10 @@
 //
 
 
-#import "MobilePhoneFormatterConfig.h"
+#import "FTCMobilePhoneFormatterConfig.h"
 
 
-@implementation MobilePhoneFormatterConfig
+@implementation FTCMobilePhoneFormatterConfig
 {
 }
 

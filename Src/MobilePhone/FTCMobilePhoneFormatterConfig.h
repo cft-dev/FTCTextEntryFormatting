@@ -8,7 +8,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MobilePhoneFormatterConfig : NSObject<FTCMaskFormatterConfig>
+@interface FTCMobilePhoneFormatterConfig : NSObject<FTCMaskFormatterConfig>
 
 @property (nonatomic, readwrite) unichar maskCharacter; // default '_'
 

@@ -10,7 +10,7 @@
 @class MoneyType;
 
 
-@interface CaneIntegralMoneyAmountEntryEditingInputFilter : NSObject<FTCTextEntryEditingInputFilter>
+@interface FTCIntegralMoneyAmountEntryEditingInputFilter : NSObject<FTCTextEntryEditingInputFilter>
 
 @property (nonatomic, strong) MoneyType *maxMoneyAmount;
 

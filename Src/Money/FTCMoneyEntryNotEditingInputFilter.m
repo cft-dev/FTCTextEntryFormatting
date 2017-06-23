@@ -4,15 +4,15 @@
 //
 
 
-#import "CaneMoneyEntryNotEditingInputFilter.h"
-#import "CaneMoneyEntryFormatUtils.h"
+#import "FTCMoneyEntryNotEditingInputFilter.h"
+#import "FTCMoneyEntryFormatUtils.h"
 #import <FTCMoneyType/MoneyType.h>
 #import <FTCMoneyType/MoneyTypeParser.h>
 
 
 static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
-@implementation CaneMoneyEntryNotEditingInputFilter
+@implementation FTCMoneyEntryNotEditingInputFilter
 {
 
 }
@@ -35,17 +35,17 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
 	if( 0 == string.length )
 	{
-		return [CaneMoneyEntryFormatUtils emptyString];
+		return [FTCMoneyEntryFormatUtils emptyString];
 	}
 
-	NSString *result = [CaneMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:string];
-	result = [CaneMoneyEntryFormatUtils trimZeroHeadFromString:result];
+	NSString *result = [FTCMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:string];
+	result = [FTCMoneyEntryFormatUtils trimZeroHeadFromString:result];
 	result = [self trimZeroTailFromString:result];
 	result = [self trimEndingSeparatorInString:result];
 
 	if( 0 == result.length )
 	{
-		result = [CaneMoneyEntryFormatUtils zeroString];
+		result = [FTCMoneyEntryFormatUtils zeroString];
 	}
 
 	result = [self fixNotExistingIntegerPartInString:result];
@@ -83,7 +83,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 		formatter.currencyGroupingSeparator = @"\u2060 \u2060";
 
 		NSString *result = [formatter stringFromNumber:@(_maxMoneyAmount.value)];
-		return [CaneMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:result];
+		return [FTCMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:result];
 	}
 	return string;
 }
@@ -92,7 +92,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 {
 	NSString *result = string;
 
-	const NSUInteger separatorLocation = [string rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
+	const NSUInteger separatorLocation = [string rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 
 	if(NSNotFound != separatorLocation)
 	{
@@ -113,7 +113,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
 	if(0 < result.length)
 	{
-		const NSRange trimmedStringSeparatorRange = [result rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]];
+		const NSRange trimmedStringSeparatorRange = [result rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]];
 
 		if(NSNotFound != trimmedStringSeparatorRange.location)
 		{
@@ -133,11 +133,11 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
 	if(0 < result.length)
 	{
-		const NSRange trimmedStringSeparatorRange = [result rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]];
+		const NSRange trimmedStringSeparatorRange = [result rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]];
 
 		if(0 == trimmedStringSeparatorRange.location)
 		{
-			result = [[CaneMoneyEntryFormatUtils zeroString] stringByAppendingString:result];
+			result = [[FTCMoneyEntryFormatUtils zeroString] stringByAppendingString:result];
 		}
 	}
 
@@ -148,7 +148,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 {
 	NSString *result = string;
 
-	NSRange separatorRange = [string rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]];
+	NSRange separatorRange = [string rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]];
 
 	if( NSNotFound != separatorRange.location )
 	{
@@ -159,14 +159,14 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 		{
 			for( NSInteger index = 0; index < fractionalDigitsToAdd; index++ )
 			{
-				result = [result stringByAppendingString:[CaneMoneyEntryFormatUtils zeroString]];
+				result = [result stringByAppendingString:[FTCMoneyEntryFormatUtils zeroString]];
 			}
 		}
 	}
 	else
 	{
-		NSString *separator = [CaneMoneyEntryFormatUtils preferredDecimalSeparator];
-		NSString *zeroString = [CaneMoneyEntryFormatUtils zeroString];
+		NSString *separator = [FTCMoneyEntryFormatUtils preferredDecimalSeparator];
+		NSString *zeroString = [FTCMoneyEntryFormatUtils zeroString];
 		NSString *zeroTail = [zeroString stringByAppendingString:zeroString];
 		NSString *tail = [separator stringByAppendingString:zeroTail];
 		result = [result stringByAppendingString:tail];
@@ -188,7 +188,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 	{
 		NSString *substring = [string substringWithRange:NSMakeRange((NSUInteger)i, 1)];
 
-		if( [[CaneMoneyEntryFormatUtils zeroString] isEqualToString:substring] )
+		if( [[FTCMoneyEntryFormatUtils zeroString] isEqualToString:substring] )
 		{
 			zeroHeadRange.length++;
 			zeroHeadRange.location = (NSUInteger)i;
@@ -222,7 +222,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
     return [self isEqualToFilter:object];
 }
 
-- (BOOL)isEqualToFilter:(CaneMoneyEntryNotEditingInputFilter *)object
+- (BOOL)isEqualToFilter:(FTCMoneyEntryNotEditingInputFilter *)object
 {
 	return [_maxMoneyAmount isEqualToMoneyType:object.maxMoneyAmount];
 }

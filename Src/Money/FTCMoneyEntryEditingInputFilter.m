@@ -4,10 +4,10 @@
 //
 
 
-#import "CaneMoneyEntryEditingInputFilter.h"
+#import "FTCMoneyEntryEditingInputFilter.h"
 #import "FTCFilteredString.h"
 #import "FTCTextEntryFormattingStringUtils.h"
-#import "CaneMoneyEntryFormatUtils.h"
+#import "FTCMoneyEntryFormatUtils.h"
 #import <FTCMoneyType/MoneyType.h>
 #import <FTCMoneyType/MoneyTypeParser.h>
 
@@ -15,7 +15,7 @@
 static const int MAX_FRACTIONAL_DIGITS = 2;
 
 
-@implementation CaneMoneyEntryEditingInputFilter
+@implementation FTCMoneyEntryEditingInputFilter
 {
 
 }
@@ -37,13 +37,13 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 	assert( nil != originalString );
 	assert( nil != replacement );
 
-	NSString *filteredReplacement = [CaneMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:replacement];
+	NSString *filteredReplacement = [FTCMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:replacement];
 
-	const NSUInteger originalStringSeparatorLocation = [originalString rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
+	const NSUInteger originalStringSeparatorLocation = [originalString rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 
 	if(NSNotFound != originalStringSeparatorLocation)
 	{
-		filteredReplacement = [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet] fromString:filteredReplacement];
+		filteredReplacement = [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet] fromString:filteredReplacement];
 	}
 	else
 	{
@@ -65,11 +65,11 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 
 - (BOOL)shouldUseReplacementResult:(NSString *)replacementResult originalString:(NSString *)originalString
 {
-	const NSUInteger separatorLocation = [replacementResult rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
+	const NSUInteger separatorLocation = [replacementResult rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 
 	if( NSNotFound != separatorLocation )
 	{
-		NSString *fractionalPart = [CaneMoneyEntryFormatUtils removeIntegralPartFromString:replacementResult];
+		NSString *fractionalPart = [FTCMoneyEntryFormatUtils removeIntegralPartFromString:replacementResult];
 		if ( fractionalPart.length > MAX_FRACTIONAL_DIGITS )
 		{
 			return NO;
@@ -98,13 +98,13 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 {
 	NSString *result = string;
 
-	const NSUInteger separatorLocation = [result rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
+	const NSUInteger separatorLocation = [result rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 
 	if(NSNotFound != separatorLocation)
 	{
 		NSString *singleSeparator = [result substringWithRange:NSMakeRange(separatorLocation, 1)];
 
-		result = [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet] fromString:result];
+		result = [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet] fromString:result];
 		result = [result stringByReplacingCharactersInRange:NSMakeRange(separatorLocation, 0) withString:singleSeparator];
 	}
 
@@ -131,7 +131,7 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
     return [self isEqualToFilter:object];
 }
 
-- (BOOL)isEqualToFilter:(CaneMoneyEntryEditingInputFilter *)object
+- (BOOL)isEqualToFilter:(FTCMoneyEntryEditingInputFilter *)object
 {
 	return [_maxMoneyAmount isEqualToMoneyType:object.maxMoneyAmount];
 }

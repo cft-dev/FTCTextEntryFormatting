@@ -4,7 +4,7 @@
 //
 
 
-@interface CaneMoneyEntryFormatUtils : NSObject
+@interface FTCMoneyEntryFormatUtils : NSObject
 
 + (NSString *)trimZeroHeadFromString:(NSString *const)string;
 + (NSString *)removeNonMoneyEntryCharactersFromString:(NSString *const)string;

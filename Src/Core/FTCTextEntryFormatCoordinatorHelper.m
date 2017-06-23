@@ -3,16 +3,16 @@
 // Copyright (c) 2016 FTC. All rights reserved.
 //
 
-#import "CaneTextEntryFormatCoordinatorHelper.h"
+#import "FTCTextEntryFormatCoordinatorHelper.h"
 #import "FTCTextEntryFormatCoordinator.h"
 #import "FTCTextEntryFormattingConfig.h"
 
 
-@interface CaneTextEntryFormatCoordinatorHelper ()<FTCTextEntryDelegate>
+@interface FTCTextEntryFormatCoordinatorHelper ()<FTCTextEntryDelegate>
 
 @end
 
-@implementation CaneTextEntryFormatCoordinatorHelper
+@implementation FTCTextEntryFormatCoordinatorHelper
 {
 	id<FTCTextEntry> __weak entryUI;
 

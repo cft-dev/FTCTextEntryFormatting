@@ -7,14 +7,14 @@
 #import "FTCTextEntryFormatter.h"
 
 
-@class MobilePhoneFormatterConfig;
+@class FTCMobilePhoneFormatterConfig;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MobilePhoneFormatter : NSObject<FTCTextEntryFormatter>
+@interface FTCMobilePhoneFormatter : NSObject<FTCTextEntryFormatter>
 
 - (instancetype)init NS_UNAVAILABLE;
-- (instancetype)initWithConfig:(MobilePhoneFormatterConfig *)aConfig;
+- (instancetype)initWithConfig:(FTCMobilePhoneFormatterConfig *)aConfig;
 
 @end
 

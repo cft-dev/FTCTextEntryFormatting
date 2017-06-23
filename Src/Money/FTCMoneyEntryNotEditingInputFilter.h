@@ -11,7 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CaneMoneyEntryNotEditingInputFilter : NSObject<FTCTextEntryNotEditingInputFilter>
+@interface FTCMoneyEntryNotEditingInputFilter : NSObject<FTCTextEntryNotEditingInputFilter>
 
 @property (nonatomic, strong) MoneyType *maxMoneyAmount;
 

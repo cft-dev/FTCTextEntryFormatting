@@ -3,12 +3,12 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-#import "CaneMoneyEntryEditingFormatter.h"
+#import "FTCMoneyEntryEditingFormatter.h"
 #import "FTCPostfixFormatter.h"
 #import <FTCMoneyType/CurrencyType.h>
 
 
-@implementation CaneMoneyEntryEditingFormatter
+@implementation FTCMoneyEntryEditingFormatter
 {
 	FTCPostfixFormatter *postfixFormatter;
 	CurrencyType *currency;
@@ -77,7 +77,7 @@
     return [self isEqualToFormatter:object];
 }
 
-- (BOOL)isEqualToFormatter:(CaneMoneyEntryEditingFormatter *)formatter
+- (BOOL)isEqualToFormatter:(FTCMoneyEntryEditingFormatter *)formatter
 {
 	if( nil == currency )
 	{

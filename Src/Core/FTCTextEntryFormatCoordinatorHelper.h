@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 
-@interface CaneTextEntryFormatCoordinatorHelper : NSObject
+@interface FTCTextEntryFormatCoordinatorHelper : NSObject
 
 @property (nonatomic, nullable, copy) void (^didChangeValueHandler)();
 
