@@ -2,13 +2,10 @@
 // Created by Sechko Artem Sergeevich on 25/03/15.
 // Copyright (c) 2015 CFT. All rights reserved.
 //
+
 #import "FTCPostfixFormatter.h"
 
-
 @implementation FTCPostfixFormatter
-{
-
-}
 
 - (instancetype)init
 {

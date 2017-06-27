@@ -3,14 +3,11 @@
 // Copyright (c) 2016 FTC. All rights reserved.
 //
 
-#import "MobilePhoneInputFilter.h"
+#import "FTCMobilePhoneInputFilter.h"
 #import "FTCFilteredString.h"
 #import "FTCTextEntryFormattingStringUtils.h"
 
-
-@implementation MobilePhoneInputFilter
-{
-}
+@implementation FTCMobilePhoneInputFilter
 
 - (instancetype)initWithMaxLength:(NSUInteger)aLength
 {

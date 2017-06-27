@@ -1,15 +1,11 @@
 //
-// Created by Дирша Андрей Александрович on 26.07.16.
-// Copyright (c) 2016 FTC. All rights reserved.
+// Created by Denis Morozov on 23/06/2017.
+// Copyright (c) 2017 FTC. All rights reserved.
 //
 
-
-@class FTCTextEntryFormattingConfig;
-
+@protocol FTCTextEntry;
 
 NS_ASSUME_NONNULL_BEGIN
-
-@protocol FTCTextEntry;
 
 @protocol FTCTextEntryDelegate<NSObject>
 
@@ -27,21 +23,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)addDelegate:(id<FTCTextEntryDelegate>)delegate NS_SWIFT_NAME( addDelegate(_:) );
 - (void)removeDelegate:(id<FTCTextEntryDelegate>)delegate NS_SWIFT_NAME( removeDelegate(_:) );
-
-@end
-
-
-@interface CaneTextEntryFormatCoordinatorHelper : NSObject
-
-@property (nonatomic, nullable, copy) void (^didChangeValueHandler)();
-
-@property (nonatomic, nullable, copy) NSString *rawValue;
-
-@property (nonatomic, nullable, readonly) NSString *formattedValue;
-
-- (instancetype)initWithUI:(id<FTCTextEntry>)textEntryUI;
-
-- (void)applyFormattingConfig:(FTCTextEntryFormattingConfig *)config NS_SWIFT_NAME( apply(formattingConfig:) );
 
 @end
 

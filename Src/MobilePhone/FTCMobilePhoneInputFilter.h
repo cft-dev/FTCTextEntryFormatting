@@ -3,14 +3,12 @@
 // Copyright (c) 2016 FTC. All rights reserved.
 //
 
-
-
 #import "FTCTextEntryEditingInputFilter.h"
 #import "FTCTextEntryNotEditingInputFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MobilePhoneInputFilter : NSObject<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>
+@interface FTCMobilePhoneInputFilter : NSObject<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>
 
 @property (nonatomic, readonly) NSUInteger maxLength;
 

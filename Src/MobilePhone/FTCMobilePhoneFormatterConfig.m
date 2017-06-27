@@ -3,13 +3,9 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
+#import "FTCMobilePhoneFormatterConfig.h"
 
-#import "MobilePhoneFormatterConfig.h"
-
-
-@implementation MobilePhoneFormatterConfig
-{
-}
+@implementation FTCMobilePhoneFormatterConfig
 
 @synthesize format = _format;
 @synthesize cutTail = _cutTail;
@@ -37,6 +33,5 @@
 
 	return self;
 }
-
 
 @end

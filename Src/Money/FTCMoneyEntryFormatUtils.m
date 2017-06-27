@@ -3,23 +3,18 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
-#import "CaneMoneyEntryFormatUtils.h"
+#import "FTCMoneyEntryFormatUtils.h"
 #import "FTCTextEntryFormattingStringUtils.h"
-
 
 static NSString * const EMPTY_STRING = @"";
 static NSString * const ZERO_STRING = @"0";
 static NSString * const DECIMAL_SEPARATORS = @".,";
 
-@implementation CaneMoneyEntryFormatUtils
-{
-
-}
+@implementation FTCMoneyEntryFormatUtils
 
 + (NSString *)trimZeroHeadFromString:(NSString * const)string
 {
-	const NSUInteger zeroHeadLength = [CaneMoneyEntryFormatUtils zeroHeadRangeForString:string].length;
+	const NSUInteger zeroHeadLength = [FTCMoneyEntryFormatUtils zeroHeadRangeForString:string].length;
 
 	return [string substringFromIndex:zeroHeadLength];
 }
@@ -66,7 +61,7 @@ static NSString * const DECIMAL_SEPARATORS = @".,";
 
 + (NSString *)removeNonMoneyEntryCharactersFromString:(NSString * const)string
 {
-	return [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[CaneMoneyEntryFormatUtils nonMoneyEntryCharacters] fromString:string];
+	return [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[FTCMoneyEntryFormatUtils nonMoneyEntryCharacters] fromString:string];
 }
 
 + (NSCharacterSet *)nonMoneyEntryCharacters
@@ -87,7 +82,7 @@ static NSString * const DECIMAL_SEPARATORS = @".,";
 
 + (NSString *)removeFractionalPartFromString:(NSString *)string
 {
-	const NSUInteger separatorLocation = [string rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
+	const NSUInteger separatorLocation = [string rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 
 	if(NSNotFound != separatorLocation)
 	{
@@ -99,7 +94,7 @@ static NSString * const DECIMAL_SEPARATORS = @".,";
 
 + (NSString *)removeIntegralPartFromString:(NSString *)string
 {
-	const NSUInteger separatorLocation = [string rangeOfCharacterFromSet:[CaneMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
+	const NSUInteger separatorLocation = [string rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 
 	if(NSNotFound != separatorLocation)
 	{
@@ -131,7 +126,7 @@ static NSString * const DECIMAL_SEPARATORS = @".,";
 	static dispatch_once_t predicate;
 	dispatch_once(&predicate, ^
 	{
-		separatingCharSet = [NSCharacterSet characterSetWithCharactersInString:[CaneMoneyEntryFormatUtils decimalSeparators]];
+		separatingCharSet = [NSCharacterSet characterSetWithCharactersInString:[FTCMoneyEntryFormatUtils decimalSeparators]];
 	});
 
 	return separatingCharSet;

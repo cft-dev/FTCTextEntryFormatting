@@ -7,7 +7,6 @@
 #import "FTCMaskFormatterConfig.h"
 #import "FTCTextEntryFormattingStringUtils.h"
 
-
 @implementation FTCMaskFormatter
 {
 	id<FTCMaskFormatterConfig> config;

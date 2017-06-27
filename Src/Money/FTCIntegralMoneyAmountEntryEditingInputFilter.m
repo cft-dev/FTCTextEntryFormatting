@@ -3,19 +3,14 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
-#import "CaneIntegralMoneyAmountEntryEditingInputFilter.h"
+#import "FTCIntegralMoneyAmountEntryEditingInputFilter.h"
 #import "FTCTextEntryFormattingStringUtils.h"
 #import "FTCFilteredString.h"
-#import "CaneMoneyEntryFormatUtils.h"
+#import "FTCMoneyEntryFormatUtils.h"
 #import <FTCMoneyType/MoneyType.h>
 #import <FTCMoneyType/MoneyTypeParser.h>
 
-
-@implementation CaneIntegralMoneyAmountEntryEditingInputFilter
-{
-
-}
+@implementation FTCIntegralMoneyAmountEntryEditingInputFilter
 
 - (instancetype)init
 {
@@ -34,8 +29,8 @@
 	assert( (nil != originalString) && @"Argument 'originalString' must not be nil." );
 	assert( (nil != replacement) && @"Argument 'replacement' must not be nil." );
 
-	NSString *filteredReplacement = [CaneMoneyEntryFormatUtils removeFractionalPartFromString:replacement];
-	filteredReplacement = [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[CaneIntegralMoneyAmountEntryEditingInputFilter notAllowedCharacters] fromString:filteredReplacement];
+	NSString *filteredReplacement = [FTCMoneyEntryFormatUtils removeFractionalPartFromString:replacement];
+	filteredReplacement = [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[FTCIntegralMoneyAmountEntryEditingInputFilter notAllowedCharacters] fromString:filteredReplacement];
 
 	NSRange filteredReplacementRange = range;
 	filteredReplacementRange.length = filteredReplacement.length;
@@ -101,7 +96,7 @@
 	return [self isEqualToFilter:object];
 }
 
-- (BOOL)isEqualToFilter:(CaneIntegralMoneyAmountEntryEditingInputFilter *)filter
+- (BOOL)isEqualToFilter:(FTCIntegralMoneyAmountEntryEditingInputFilter *)filter
 {
 	return [_maxMoneyAmount isEqualToMoneyType:filter.maxMoneyAmount];
 }

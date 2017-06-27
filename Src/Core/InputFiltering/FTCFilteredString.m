@@ -3,14 +3,9 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCFilteredString.h"
 
-
 @implementation FTCFilteredString
-{
-
-}
 
 - (instancetype)initWithString:(NSString *)string range:(NSRange)range
 {
@@ -26,6 +21,5 @@
 
 	return self;
 }
-
 
 @end

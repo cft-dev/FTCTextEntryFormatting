@@ -3,14 +3,12 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
-#import "CaneIntegralMoneyAmountEntryNotEditingInputFilter.h"
-#import "CaneMoneyEntryFormatUtils.h"
+#import "FTCIntegralMoneyAmountEntryNotEditingInputFilter.h"
+#import "FTCMoneyEntryFormatUtils.h"
 #import <FTCMoneyType/MoneyType.h>
 #import <FTCMoneyType/MoneyTypeParser.h>
 
-
-@implementation CaneIntegralMoneyAmountEntryNotEditingInputFilter
+@implementation FTCIntegralMoneyAmountEntryNotEditingInputFilter
 
 - (instancetype)init
 {
@@ -25,14 +23,14 @@
 
 	if( 0 == string.length )
 	{
-		return [CaneMoneyEntryFormatUtils emptyString];
+		return [FTCMoneyEntryFormatUtils emptyString];
 	}
 
 	string = [self checkMaximum:string];
 
-	string = [CaneMoneyEntryFormatUtils removeFractionalPartFromString:string];
-	string = [CaneMoneyEntryFormatUtils trimZeroHeadFromString:string];
-	string = [CaneMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:string];
+	string = [FTCMoneyEntryFormatUtils removeFractionalPartFromString:string];
+	string = [FTCMoneyEntryFormatUtils trimZeroHeadFromString:string];
+	string = [FTCMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:string];
 
 	return string;
 }
@@ -71,7 +69,7 @@
 	return [self isEqualToFilter:object];
 }
 
-- (BOOL)isEqualToFilter:(CaneIntegralMoneyAmountEntryNotEditingInputFilter *)filter
+- (BOOL)isEqualToFilter:(FTCIntegralMoneyAmountEntryNotEditingInputFilter *)filter
 {
 	return [_maxMoneyAmount isEqualToMoneyType:filter.maxMoneyAmount];
 }

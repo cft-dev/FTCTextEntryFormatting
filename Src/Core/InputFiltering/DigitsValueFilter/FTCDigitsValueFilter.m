@@ -3,15 +3,11 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCDigitsValueFilter.h"
 #import "FTCFilteredString.h"
 #import "FTCTextEntryFormattingStringUtils.h"
 
-
 @implementation FTCDigitsValueFilter
-{
-}
 
 - (instancetype)initWithMaxLength:(NSUInteger)aLength
 {

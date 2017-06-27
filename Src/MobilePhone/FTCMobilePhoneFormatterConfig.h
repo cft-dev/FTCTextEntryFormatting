@@ -3,12 +3,11 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCMaskFormatterConfig.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MobilePhoneFormatterConfig : NSObject<FTCMaskFormatterConfig>
+@interface FTCMobilePhoneFormatterConfig : NSObject<FTCMaskFormatterConfig>
 
 @property (nonatomic, readwrite) unichar maskCharacter; // default '_'
 

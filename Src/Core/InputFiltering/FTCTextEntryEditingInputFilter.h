@@ -3,9 +3,7 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 @class FTCFilteredString;
-
 
 @protocol FTCTextEntryEditingInputFilter<NSObject>
 

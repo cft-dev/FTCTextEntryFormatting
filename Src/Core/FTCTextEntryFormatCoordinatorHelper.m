@@ -3,16 +3,16 @@
 // Copyright (c) 2016 FTC. All rights reserved.
 //
 
-#import "CaneTextEntryFormatCoordinatorHelper.h"
+#import "FTCTextEntryFormatCoordinatorHelper.h"
 #import "FTCTextEntryFormatCoordinator.h"
 #import "FTCTextEntryFormattingConfig.h"
+#import "FTCTextEntry.h"
 
-
-@interface CaneTextEntryFormatCoordinatorHelper ()<FTCTextEntryDelegate>
+@interface FTCTextEntryFormatCoordinatorHelper ()<FTCTextEntryDelegate>
 
 @end
 
-@implementation CaneTextEntryFormatCoordinatorHelper
+@implementation FTCTextEntryFormatCoordinatorHelper
 {
 	id<FTCTextEntry> __weak entryUI;
 
@@ -126,7 +126,7 @@
 
 	entryUI.selectedTextRange = formatCoordinator.currentSelectionRangeInFormattedValue;
 
-    currentConfig = config;
+	currentConfig = config;
 }
 
 @end

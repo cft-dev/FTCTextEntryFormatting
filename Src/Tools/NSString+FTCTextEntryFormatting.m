@@ -3,9 +3,7 @@
 // Copyright (c) 2017 FTC. All rights reserved.
 //
 
-
 #import "NSString+FTCTextEntryFormatting.h"
-
 
 @implementation NSString (FTCTextEntryFormatting)
 

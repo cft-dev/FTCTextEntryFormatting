@@ -3,15 +3,13 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCTextEntryNotEditingInputFilter.h"
-
 
 @class MoneyType;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CaneMoneyEntryNotEditingInputFilter : NSObject<FTCTextEntryNotEditingInputFilter>
+@interface FTCMoneyEntryNotEditingInputFilter : NSObject<FTCTextEntryNotEditingInputFilter>
 
 @property (nonatomic, strong) MoneyType *maxMoneyAmount;
 

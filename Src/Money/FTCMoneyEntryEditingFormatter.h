@@ -3,14 +3,13 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-
 #import "FTCTextEntryFormatter.h"
 
 @class CurrencyType;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CaneMoneyEntryEditingFormatter : NSObject<FTCTextEntryFormatter>
+@interface FTCMoneyEntryEditingFormatter : NSObject<FTCTextEntryFormatter>
 
 - (instancetype)init NS_UNAVAILABLE;
 

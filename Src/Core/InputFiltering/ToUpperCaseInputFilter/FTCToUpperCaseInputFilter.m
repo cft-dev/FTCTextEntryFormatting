@@ -3,15 +3,10 @@
 // Copyright (c) 2015 CFT. All rights reserved.
 //
 
-
 #import "FTCToUpperCaseInputFilter.h"
 #import "FTCFilteredString.h"
 
-
 @implementation FTCToUpperCaseInputFilter
-{
-
-}
 
 - (instancetype)init
 {
