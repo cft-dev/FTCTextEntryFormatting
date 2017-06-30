@@ -5,8 +5,6 @@
 
 #import "FTCIntegralMoneyAmountEntryNotEditingInputFilter.h"
 #import "FTCMoneyEntryFormatUtils.h"
-#import <FTCMoneyType/MoneyType.h>
-#import <FTCMoneyType/MoneyTypeParser.h>
 
 @implementation FTCIntegralMoneyAmountEntryNotEditingInputFilter
 
@@ -26,8 +24,6 @@
 		return [FTCMoneyEntryFormatUtils emptyString];
 	}
 
-	string = [self checkMaximum:string];
-
 	string = [FTCMoneyEntryFormatUtils removeFractionalPartFromString:string];
 	string = [FTCMoneyEntryFormatUtils trimZeroHeadFromString:string];
 	string = [FTCMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:string];
@@ -35,43 +31,9 @@
 	return string;
 }
 
-- (NSString *)checkMaximum:(NSString *)string
-{
-	if( nil == _maxMoneyAmount )
-	{
-		return string;
-	}
-	MoneyType *moneyAmount = [MoneyTypeParser parseAmountFromString:string];
-	if( [_maxMoneyAmount isLessThanAmount:moneyAmount] )
-	{
-		return [NSString stringWithFormat:@"%ld", (long) [_maxMoneyAmount integerValuePart]];
-	}
-	return string;
-}
-
 - (BOOL)isEqual:(id)object
 {
-	if( nil == object )
-	{
-		return NO;
-	}
-
-	if( self == object )
-	{
-		return YES;
-	}
-
-	if( NO == [object isKindOfClass:[self class]] )
-	{
-		return NO;
-	}
-
-	return [self isEqualToFilter:object];
-}
-
-- (BOOL)isEqualToFilter:(FTCIntegralMoneyAmountEntryNotEditingInputFilter *)filter
-{
-	return [_maxMoneyAmount isEqualToMoneyType:filter.maxMoneyAmount];
+	return ( (self == object) || [object isKindOfClass:FTCIntegralMoneyAmountEntryNotEditingInputFilter.class] );
 }
 
 @end

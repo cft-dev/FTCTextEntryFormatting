@@ -7,8 +7,6 @@
 #import "FTCFilteredString.h"
 #import "FTCTextEntryFormattingStringUtils.h"
 #import "FTCMoneyEntryFormatUtils.h"
-#import <FTCMoneyType/MoneyType.h>
-#import <FTCMoneyType/MoneyTypeParser.h>
 
 static const int MAX_FRACTIONAL_DIGITS = 2;
 
@@ -49,7 +47,7 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 
 	NSString *replacedString = [originalString stringByReplacingCharactersInRange:range withString:filteredReplacement];
 
-	if( [self shouldUseReplacementResult:replacedString originalString:originalString] )
+	if( [self shouldUseReplacementResult:replacedString] )
 	{
 		return [[FTCFilteredString alloc] initWithString:replacedString range:filteredReplacementRange];
 	}
@@ -57,7 +55,7 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 	return [[FTCFilteredString alloc] initWithString:originalString range:NSMakeRange(filteredReplacementRange.location, 0)];
 }
 
-- (BOOL)shouldUseReplacementResult:(NSString *)replacementResult originalString:(NSString *)originalString
+- (BOOL)shouldUseReplacementResult:(NSString *)replacementResult
 {
 	const NSUInteger separatorLocation = [replacementResult rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 
@@ -65,21 +63,6 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 	{
 		NSString *fractionalPart = [FTCMoneyEntryFormatUtils removeIntegralPartFromString:replacementResult];
 		if ( fractionalPart.length > MAX_FRACTIONAL_DIGITS )
-		{
-			return NO;
-		}
-	}
-
-	if( nil != _maxMoneyAmount )
-	{
-		MoneyType *newMoney = [MoneyTypeParser parseAmountFromString:replacementResult];
-		assert( nil != newMoney );
-		if( [_maxMoneyAmount isLessThanAmount:newMoney] )
-		{
-			return NO;
-		}
-		if( ([_maxMoneyAmount isEqualToMoneyType:newMoney] && (separatorLocation == replacementResult.length - 1)) &&
-				replacementResult.length > originalString.length )
 		{
 			return NO;
 		}
@@ -107,27 +90,7 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 
 - (BOOL)isEqual:(id)object
 {
-	if( nil == object )
-	{
-		return NO;
-	}
-
-	if( self == object )
-	{
-		return YES;
-	}
-
-	if( NO == [object isKindOfClass:[self class]] )
-	{
-		return NO;
-	}
-
-	return [self isEqualToFilter:object];
-}
-
-- (BOOL)isEqualToFilter:(FTCMoneyEntryEditingInputFilter *)object
-{
-	return [_maxMoneyAmount isEqualToMoneyType:object.maxMoneyAmount];
+	return ( (self == object) || [object isKindOfClass:FTCMoneyEntryEditingInputFilter.class] );
 }
 
 @end

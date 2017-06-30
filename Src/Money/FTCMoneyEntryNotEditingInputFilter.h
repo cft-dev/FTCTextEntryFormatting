@@ -5,13 +5,9 @@
 
 #import "FTCTextEntryNotEditingInputFilter.h"
 
-@class MoneyType;
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCMoneyEntryNotEditingInputFilter : NSObject<FTCTextEntryNotEditingInputFilter>
-
-@property (nonatomic, strong) MoneyType *maxMoneyAmount;
 
 - (instancetype)init;
 

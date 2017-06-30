@@ -5,8 +5,6 @@
 
 #import "FTCMoneyEntryNotEditingInputFilter.h"
 #import "FTCMoneyEntryFormatUtils.h"
-#import <FTCMoneyType/MoneyType.h>
-#import <FTCMoneyType/MoneyTypeParser.h>
 
 static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
@@ -45,42 +43,8 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
 	result = [self fixNotExistingIntegerPartInString:result];
 	result = [self appendMissingZeroInFractionalPartToString:result];
-	result = [self checkMaximum:result];
 
 	return result;
-}
-
-- (NSString *)checkMaximum:(NSString *)string
-{
-	if( nil == _maxMoneyAmount )
-	{
-		return string;
-	}
-	MoneyType *moneyAmount = [MoneyTypeParser parseAmountFromString:string];
-	if( [_maxMoneyAmount isLessThanAmount:moneyAmount] )
-	{
-		NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-		formatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ru_RU"];
-
-		formatter.numberStyle = NSNumberFormatterCurrencyStyle;
-		formatter.roundingMode = NSNumberFormatterRoundDown;
-		formatter.maximumFractionDigits = 2;
-
-		formatter.positivePrefix = @"";
-		formatter.positiveSuffix = @"";
-
-		formatter.negativePrefix = @"\u2212";
-		formatter.negativeSuffix = @"";
-
-		formatter.currencySymbol = @"";
-		formatter.currencyCode = @"";
-
-		formatter.currencyGroupingSeparator = @"\u2060 \u2060";
-
-		NSString *result = [formatter stringFromNumber:@(_maxMoneyAmount.value)];
-		return [FTCMoneyEntryFormatUtils removeNonMoneyEntryCharactersFromString:result];
-	}
-	return string;
 }
 
 - (NSString *)trimZeroTailFromString:(NSString * const)string
@@ -199,27 +163,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
 - (BOOL)isEqual:(id)object
 {
-	if( nil == object )
-	{
-		return NO;
-	}
-
-	if( self == object )
-	{
-		return YES;
-	}
-
-	if( NO == [object isKindOfClass:[self class]] )
-	{
-		return NO;
-	}
-
-	return [self isEqualToFilter:object];
-}
-
-- (BOOL)isEqualToFilter:(FTCMoneyEntryNotEditingInputFilter *)object
-{
-	return [_maxMoneyAmount isEqualToMoneyType:object.maxMoneyAmount];
+	return ( (self == object) || [object isKindOfClass:FTCMoneyEntryNotEditingInputFilter.class] );
 }
 
 @end

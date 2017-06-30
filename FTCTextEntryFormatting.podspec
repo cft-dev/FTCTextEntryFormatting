@@ -14,6 +14,4 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   spec.ios.deployment_target = '8.0'
-
-  spec.dependency 'FTCMoneyType'
 end

@@ -5,13 +5,12 @@
 
 #import "FTCMoneyEntryNotEditingFormatter.h"
 #import "FTCPostfixFormatter.h"
-#import <FTCMoneyType/CurrencyType.h>
 
 @implementation FTCMoneyEntryNotEditingFormatter
 {
 	FTCPostfixFormatter *postfixFormatter;
 
-	CurrencyType *currency;
+	NSString *currency;
 }
 
 - (instancetype)init
@@ -20,7 +19,7 @@
 	return nil;
 }
 
-- (instancetype)initWithCurrency:(CurrencyType *)aCurrency
+- (instancetype)initWithCurrency:(NSString *)aCurrency
 {
 	self = [super init];
 
@@ -29,7 +28,7 @@
 	NSString *amountPostfix = @"";
 	if( nil != currency )
 	{
-		amountPostfix = [NSString stringWithFormat:@" %@", [currency getDisplayString]];
+		amountPostfix = [NSString stringWithFormat:@" %@", currency];
 	}
 	postfixFormatter = [[FTCPostfixFormatter alloc] initWithPostfix:amountPostfix];
 
@@ -109,7 +108,7 @@
 	{
 		return (nil == object->currency);
 	}
-	return [currency isEqualToCurrency:object->currency];
+	return [currency isEqualToString:object->currency];
 }
 
 @end
