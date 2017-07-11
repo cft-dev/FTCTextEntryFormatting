@@ -67,7 +67,7 @@
 		return YES;
 	}
 
-	if( NO == [object isKindOfClass:[self class]] )
+	if( NO == [object isMemberOfClass:self.class] )
 	{
 		return NO;
 	}

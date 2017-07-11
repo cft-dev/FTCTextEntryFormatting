@@ -55,7 +55,7 @@
 
 - (BOOL)isEqual:(id)object
 {
-	return ( (self == object) || [object isKindOfClass:FTCIntegralMoneyAmountEntryEditingInputFilter.class] );
+	return ( (self == object) || [object isMemberOfClass:self.class] );
 }
 
 @end

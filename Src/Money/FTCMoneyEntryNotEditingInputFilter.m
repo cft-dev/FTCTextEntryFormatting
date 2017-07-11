@@ -163,7 +163,7 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 
 - (BOOL)isEqual:(id)object
 {
-	return ( (self == object) || [object isKindOfClass:FTCMoneyEntryNotEditingInputFilter.class] );
+	return ( (self == object) || [object isMemberOfClass:self.class] );
 }
 
 @end
