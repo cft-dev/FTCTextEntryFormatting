@@ -8,7 +8,7 @@
 #import "FTCTextEntryFormattingConfig.h"
 #import "FTCTextEntry.h"
 
-@interface FTCTextEntryFormatCoordinatorHelper ()<FTCTextEntryDelegate>
+@interface FTCTextEntryFormatCoordinatorHelper ()
 
 @end
 
@@ -28,7 +28,6 @@
 	self = [super init];
 
 	entryUI = anEntryUI;
-	[entryUI addDelegate:self];
 	formatCoordinator = [[FTCTextEntryFormatCoordinator alloc] init];
 
 	return self;
@@ -63,7 +62,7 @@
 	return formatCoordinator.formattedValue;
 }
 
-- (void)textEntryDidBeginEditing:(id<FTCTextEntry>)textEntry
+- (void)beginEditing
 {
 	[self handleValueChange:^
 	{
@@ -73,7 +72,7 @@
 	}];
 }
 
-- (BOOL)textEntry:(id<FTCTextEntry>)textEntry shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)replacement
+- (void)changeCharactersInRange:(NSRange)range replacement:(NSString *)replacement
 {
 	[self handleValueChange:^
 	{
@@ -81,11 +80,9 @@
 		entryUI.text = formatCoordinator.formattedValue;
 		entryUI.selectedTextRange = formatCoordinator.currentSelectionRangeInFormattedValue;
 	}];
-
-	return NO;
 }
 
-- (void)textEntryDidEndEditing:(id<FTCTextEntry>)textEntry
+- (void)endEditing
 {
 	[self handleValueChange:^
 	{

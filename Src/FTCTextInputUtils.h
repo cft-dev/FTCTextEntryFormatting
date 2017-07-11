@@ -2,7 +2,7 @@
 // Created by Andrey Sikerin on 11/14/13.
 // Copyright (c) 2013 FTC. All rights reserved.
 
-@interface FTCTextFieldUtils : NSObject
+@interface FTCTextInputUtils : NSObject
 
 + (void)selectTextInTextInput:(id<UITextInput>)textInput atRange:(NSRange)selectionRange NS_SWIFT_NAME( selectText(in:at:) );
 + (void)selectTextInTextInput:(id<UITextInput>)textInput fromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex NS_SWIFT_NAME( selectText(in:from:to:) );
