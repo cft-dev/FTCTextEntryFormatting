@@ -5,15 +5,13 @@
 
 #import "FTCTextEntryFormatter.h"
 
-@class CurrencyType;
-
 NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCMoneyEntryEditingFormatter : NSObject<FTCTextEntryFormatter>
 
 - (instancetype)init NS_UNAVAILABLE;
 
-- (instancetype)initWithCurrency:(nullable CurrencyType *)currency;
+- (instancetype)initWithCurrency:(nullable NSString *)aCurrency;
 
 @end
 
