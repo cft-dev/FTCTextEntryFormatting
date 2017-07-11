@@ -33,7 +33,7 @@
 
 - (BOOL)isEqual:(id)object
 {
-	return ( (self == object) || [object isKindOfClass:FTCIntegralMoneyAmountEntryNotEditingInputFilter.class] );
+	return ( (self == object) || [object isMemberOfClass:self.class] );
 }
 
 @end

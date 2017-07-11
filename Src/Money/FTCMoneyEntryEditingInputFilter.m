@@ -90,7 +90,7 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 
 - (BOOL)isEqual:(id)object
 {
-	return ( (self == object) || [object isKindOfClass:FTCMoneyEntryEditingInputFilter.class] );
+	return ( (self == object) || [object isMemberOfClass:self.class] );
 }
 
 @end
