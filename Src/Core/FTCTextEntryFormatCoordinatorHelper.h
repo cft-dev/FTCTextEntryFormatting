@@ -18,6 +18,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithUI:(id<FTCTextEntry>)textEntryUI;
 
+- (void)beginEditing;
+- (void)changeCharactersInRange:(NSRange)range replacement:(NSString *)replacement;
+- (void)endEditing;
+
 - (void)applyFormattingConfig:(FTCTextEntryFormattingConfig *)config NS_SWIFT_NAME( apply(formattingConfig:) );
 
 @end

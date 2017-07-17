@@ -2,9 +2,9 @@
 // Created by Andrey Sikerin on 11/14/13.
 // Copyright (c) 2013 FTC. All rights reserved.
 
-#import "FTCTextFieldUtils.h"
+#import "FTCTextInputUtils.h"
 
-@implementation FTCTextFieldUtils
+@implementation FTCTextInputUtils
 
 + (void)selectTextInTextInput:(id<UITextInput>)textInput atRange:(NSRange)selectionRange
 {
@@ -12,7 +12,7 @@
 
 	const NSUInteger selectionStart = selectionRange.location;
 	const NSUInteger selectionEnd = selectionRange.location + selectionRange.length;
-	[FTCTextFieldUtils selectTextInTextInput:textInput fromIndex:selectionStart toIndex:selectionEnd];
+	[FTCTextInputUtils selectTextInTextInput:textInput fromIndex:selectionStart toIndex:selectionEnd];
 }
 
 + (void)selectTextInTextInput:(id<UITextInput>)textInput fromIndex:(NSUInteger)fromIndex toIndex:(NSUInteger)toIndex
