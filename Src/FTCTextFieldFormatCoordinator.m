@@ -91,7 +91,7 @@
 
 // MARK: UITextFieldDelegate
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+- (void)textFieldDidBeginEditing:(UITextField *)aTextField
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldDidBeginEditing:)])
 	{
@@ -101,7 +101,7 @@
 	[formatCoordinatorHelper beginEditing];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField
+- (void)textFieldDidEndEditing:(UITextField *)aTextField
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldDidEndEditing:)])
 	{
@@ -111,7 +111,7 @@
 	[formatCoordinatorHelper endEditing];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField reason:(UITextFieldDidEndEditingReason)reason
+- (void)textFieldDidEndEditing:(UITextField *)aTextField reason:(UITextFieldDidEndEditingReason)reason
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldDidEndEditing:reason:)])
 	{
@@ -125,7 +125,7 @@
 	[formatCoordinatorHelper endEditing];
 }
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+- (BOOL)textField:(UITextField *)aTextField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
 {
 	BOOL shouldChange = YES;
 
@@ -142,7 +142,7 @@
 	return NO;
 }
 
-- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)aTextField
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldShouldBeginEditing:)])
 	{
@@ -151,7 +151,7 @@
 	return YES;
 }
 
-- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+- (BOOL)textFieldShouldEndEditing:(UITextField *)aTextField
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldShouldEndEditing:)])
 	{
@@ -160,7 +160,7 @@
 	return YES;
 }
 
-- (BOOL)textFieldShouldClear:(UITextField *)textField
+- (BOOL)textFieldShouldClear:(UITextField *)aTextField
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldShouldClear:)])
 	{
@@ -169,7 +169,7 @@
 	return YES;
 }
 
-- (BOOL)textFieldShouldReturn:(UITextField *)textField
+- (BOOL)textFieldShouldReturn:(UITextField *)aTextField
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldShouldReturn:)])
 	{
