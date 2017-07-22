@@ -3,6 +3,8 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
+@import Foundation;
+
 @protocol FTCTextEntryFormatter<NSObject>
 
 - (NSString *)toRawFromFormatted:(NSString *)formattedValue;

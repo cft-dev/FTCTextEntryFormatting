@@ -3,6 +3,8 @@
 // Copyright (c) 2017 FTC. All rights reserved.
 //
 
+@import Foundation;
+
 @interface NSString (FTCTextEntryFormatting)
 
 - (BOOL)textEntryFormatting_isEmpty;

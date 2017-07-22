@@ -3,6 +3,8 @@
 // Copyright (c) 2017 FTC. All rights reserved.
 //
 
+@import Foundation;
+
 @protocol FTCTextEntry;
 
 NS_ASSUME_NONNULL_BEGIN

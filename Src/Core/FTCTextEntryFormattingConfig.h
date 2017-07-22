@@ -3,6 +3,8 @@
 // Copyright (c) 2015 CFT. All rights reserved.
 //
 
+@import Foundation;
+
 @protocol FTCTextEntryFormatter;
 @protocol FTCTextEntryEditingInputFilter;
 @protocol FTCTextEntryNotEditingInputFilter;

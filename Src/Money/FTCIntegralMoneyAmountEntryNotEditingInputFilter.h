@@ -3,6 +3,8 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
+@import Foundation;
+
 #import "FTCTextEntryNotEditingInputFilter.h"
 
 @interface FTCIntegralMoneyAmountEntryNotEditingInputFilter : NSObject<FTCTextEntryNotEditingInputFilter>

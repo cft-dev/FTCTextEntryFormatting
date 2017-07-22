@@ -2,6 +2,9 @@
 // Created by Andrey Sikerin on 11/14/13.
 // Copyright (c) 2013 FTC. All rights reserved.
 
+@import Foundation;
+@import UIKit;
+
 @interface FTCTextInputUtils : NSObject
 
 + (void)selectTextInTextInput:(id<UITextInput>)textInput atRange:(NSRange)selectionRange NS_SWIFT_NAME( selectText(in:at:) );

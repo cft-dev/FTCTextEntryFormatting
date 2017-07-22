@@ -3,6 +3,8 @@
 // Copyright (c) 2016 FTC. All rights reserved.
 //
 
+@import Foundation;
+
 #import "FTCTextEntryEditingInputFilter.h"
 #import "FTCTextEntryNotEditingInputFilter.h"
 
