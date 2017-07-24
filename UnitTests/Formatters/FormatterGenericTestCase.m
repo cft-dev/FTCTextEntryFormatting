@@ -38,25 +38,22 @@
 	NSMutableArray *formattedAndRawRanges;
 }
 
-- (void)setUp
+- (instancetype)init
 {
-	[super setUp];
-	
+	self = [super init];
+
 	rawAndFormattedPairs = [NSMutableArray new];
 	formattedAndRawPairs = [NSMutableArray new];
 	rawAndFormattedRanges = [NSMutableArray new];
 	formattedAndRawRanges = [NSMutableArray new];
-}
 
-- (void)tearDown
-{
-	[super tearDown];
+	return self;
 }
 
 - (void)addFormattedInputValue:(NSString *)formattedInputValue etalonRawOutputValue:(NSString *)etalonRawOutputValue
 {
-	XCTAssert( (nil != formattedInputValue), @"rawInputValue must not be nil" );
-	XCTAssert( (nil != etalonRawOutputValue), @"etalonRawOutputValue must not be nil" );
+	assert( nil != formattedInputValue );
+	assert( nil != etalonRawOutputValue );
 	
 	Pair *pair = [Pair pairForKey:formattedInputValue value:etalonRawOutputValue];
 	
@@ -65,8 +62,8 @@
 
 - (void)addRawInputValue:(NSString *)rawInputValue etalonFormattedOutputValue:(NSString *)etalonFormattedOutputValue
 {
-	XCTAssert( (nil != rawInputValue), @"rawInputValue must not be nil" );
-	XCTAssert( (nil != etalonFormattedOutputValue), @"etalonFormattedOutputValue must not be nil" );
+	assert( nil != rawInputValue );
+	assert( nil != etalonFormattedOutputValue );
 	
 	Pair *pair = [Pair pairForKey:rawInputValue value:etalonFormattedOutputValue];
 	
@@ -91,13 +88,6 @@
 		@"formattedValue" : formattedValue,
 		@"etalon" : NSStringFromRange(etalon),
 	}];
-}
-
-- (void)invokeTest
-{
-	[super invokeTest];
-	
-	XCTAssert( (nil != _formatter), @"_formatter must not be nil" );
 }
 
 - (void)testToRawFromFormatted
