@@ -100,8 +100,22 @@
 		valueChange();
 	}
 
-	const BOOL valueIsReallyChanged = (NO == [initialValue isEqualToString:formatCoordinator.rawValue]);
-	if( valueIsReallyChanged && NULL != _didChangeValueHandler )
+	if( NULL == _didChangeValueHandler )
+	{
+		return;
+	}
+
+	BOOL valueIsReallyChanged;
+	if( (nil == initialValue) && (nil == formatCoordinator.rawValue) )
+	{
+		valueIsReallyChanged = NO;
+	}
+	else
+	{
+		valueIsReallyChanged = (NO == [initialValue isEqualToString:formatCoordinator.rawValue]);
+	}
+
+	if( valueIsReallyChanged )
 	{
 		_didChangeValueHandler();
 	}
