@@ -2,7 +2,7 @@
 // Created by Denis Morozov on 11/07/2017.
 //
 
-#import <Foundation/Foundation.h>
+@import UIKit;
 
 @class FTCTextEntryFormattingConfig;
 

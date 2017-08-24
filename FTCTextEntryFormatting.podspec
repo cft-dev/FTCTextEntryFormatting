@@ -8,6 +8,7 @@ Pod::Spec.new do |spec|
   spec.summary      = 'Text Entry Formatting.'
   spec.source       = { :git => 'https://stash.ftc.ru/scm/upcmc/ftctextentryformatting.git', :tag => '1.0.0' }
 
+  spec.prefix_header_contents = '@import Foundation;'
   spec.source_files         = 'Src/**/*.{h,m}'
   spec.private_header_files = 'Src/Categories/*.h', 'Src/Tools/*.h'
 
