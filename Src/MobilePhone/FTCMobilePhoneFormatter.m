@@ -5,7 +5,7 @@
 
 #import "FTCMobilePhoneFormatter.h"
 #import "FTCMaskFormatter.h"
-#import "FTCMobilePhoneFormatterConfig.h"
+#import "FTCMaskFormatterGenericConfig.h"
 
 @implementation FTCMobilePhoneFormatter
 {
@@ -18,14 +18,9 @@
 	return nil;
 }
 
-- (instancetype)initWithConfig:(FTCMobilePhoneFormatterConfig *)aConfig
+- (instancetype)initWithConfig:(FTCMaskFormatterGenericConfig *)aConfig
 {
 	self = [super init];
-
-	if( nil == self )
-	{
-		return nil;
-	}
 
 	formatter = [[FTCMaskFormatter alloc] initWithConfig:aConfig];
 

@@ -20,10 +20,6 @@
 - (instancetype)initWithMaximumLength:(NSUInteger)maximumLength
 {
 	self = [super init];
-	if( nil == self )
-	{
-		return nil;
-	}
 
 	maxLength = maximumLength;
 

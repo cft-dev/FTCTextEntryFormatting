@@ -3,7 +3,7 @@
 #import "FTCFilteredString.h"
 #import "FTCMoneyEntryFormatUtils.h"
 #import "FTCTextEntry.h"
-#import "FTCMobilePhoneFormatterConfig.h"
+#import "FTCMaskFormatterGenericConfig.h"
 #import "FTCLimitedLengthInputFilter.h"
 #import "FTCMoneyEntryEditingFormatter.h"
 #import "FTCMaskFormatter.h"

@@ -12,10 +12,6 @@
 - (instancetype)init
 {
 	self = [super init];
-	if( nil == self )
-	{
-		return nil;
-	}
 
 	_editingFormatter = [[FTCNoFormattingFormatter alloc] init];
 	_editingInputFilter = [[FTCNoFilteringFilter alloc] init];

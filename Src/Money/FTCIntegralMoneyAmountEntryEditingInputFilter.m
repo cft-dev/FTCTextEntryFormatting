@@ -14,11 +14,6 @@
 {
 	self = [super init];
 
-	if(nil == self)
-	{
-		return nil;
-	}
-
 	return self;
 }
 

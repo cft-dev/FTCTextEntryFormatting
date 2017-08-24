@@ -11,12 +11,6 @@
 - (instancetype)init
 {
 	self = [super init];
-	if( nil == self )
-	{
-		return nil;
-	}
-
-	// intentionally do nothing
 
 	return self;
 }

@@ -16,11 +16,6 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 {
 	self = [super init];
 
-	if (nil == self)
-	{
-		return nil;
-	}
-
 	return self;
 }
 

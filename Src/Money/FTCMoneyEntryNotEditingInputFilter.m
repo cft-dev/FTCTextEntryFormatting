@@ -14,11 +14,6 @@ static const NSInteger PREFERRED_NUMBER_OF_FRACTIONAL_DIGITS = 2;
 {
 	self = [super init];
 
-	if(nil == self)
-	{
-		return nil;
-	}
-
 	return self;
 }
 

@@ -6,13 +6,12 @@
 //
 //
 
+@import XCTest;
 @import FTCTextEntryFormatting;
-
-#import "FormatterGenericTestCase.h"
 
 @interface FTCPostfixFormatterTestCaseWithEmptyPostfix : XCTestCase
 {
-	FormatterGenericTestCase *_genericTestCase;
+	FTCPostfixFormatter *formatter;
 }
 
 @end
@@ -23,50 +22,41 @@
 {
 	[super setUp];
 
-	_genericTestCase = [[FormatterGenericTestCase alloc] init];
-
-	_genericTestCase.formatter = [[FTCPostfixFormatter alloc] initWithPostfix:@""];
-	
-	[_genericTestCase addFormattedInputValue:@"" etalonRawOutputValue:@""];
-	[_genericTestCase addFormattedInputValue:@"foo" etalonRawOutputValue:@"foo"];
-	
-	[_genericTestCase addRawInputValue:@"" etalonFormattedOutputValue:@""];
-	[_genericTestCase addRawInputValue:@"foo" etalonFormattedOutputValue:@"foo"];
-	
-	[_genericTestCase addRangeInRawValue:NSMakeRange(0, 0) inRawValue:@"" etalonRangeInFormattedValue:NSMakeRange(0, 0)];
-	[_genericTestCase addRangeInRawValue:NSMakeRange(0, 3) inRawValue:@"foo" etalonRangeInFormattedValue:NSMakeRange(0, 3)];
-	[_genericTestCase addRangeInRawValue:NSMakeRange(2, 1) inRawValue:@"foo" etalonRangeInFormattedValue:NSMakeRange(2, 1)];
-	
-	[_genericTestCase addRangeInFormattedValue:NSMakeRange(0, 0) inFormattedValue:@"" etalonRangeInRawValue:NSMakeRange(0, 0)];
-	[_genericTestCase addRangeInFormattedValue:NSMakeRange(0, 3) inFormattedValue:@"foo" etalonRangeInRawValue:NSMakeRange(0, 3)];
-	[_genericTestCase addRangeInFormattedValue:NSMakeRange(2, 1) inFormattedValue:@"foo" etalonRangeInRawValue:NSMakeRange(2, 1)];
+	formatter = [[FTCPostfixFormatter alloc] initWithPostfix:@""];
 }
 
-- (void)invokeTest
+- (void)test_raw_from_formatted
 {
-	[super invokeTest];
-
-	assert( nil != _genericTestCase );
+	XCTAssertEqualObjects([formatter rawFromFormatted:@""], @"");
+	XCTAssertEqualObjects([formatter rawFromFormatted:@"123"], @"123");
 }
 
-- (void)testToRawFromFormatted
+- (void)test_formatted_from_raw
 {
-	[_genericTestCase testToRawFromFormatted];
+	XCTAssertEqualObjects([formatter formattedFromRaw:@""], @"");
+	XCTAssertEqualObjects([formatter formattedFromRaw:@"123"], @"123");
 }
 
-- (void)testToFormattedFromRaw
+- (void)test_rangeInFormattedValueForRange_inRawValue
 {
-	[_genericTestCase testToFormattedFromRaw];
+	NSRange rangeInFormatted;
+
+	rangeInFormatted = [formatter rangeInFormattedValueForRange:NSMakeRange(0, 3) inRawValue:@"123"];
+	XCTAssertTrue(NSEqualRanges(rangeInFormatted, NSMakeRange(0, 3)));
+
+	rangeInFormatted = [formatter rangeInFormattedValueForRange:NSMakeRange(1, 2) inRawValue:@"123"];
+	XCTAssertTrue(NSEqualRanges(rangeInFormatted, NSMakeRange(1, 2)));
 }
 
-- (void)testGetRangeInFormattedValueFromRangeInRawValue
+- (void)test_rangeInRawValueForRange_inFormattedValue
 {
-	[_genericTestCase testGetRangeInFormattedValueFromRangeInRawValue];
-}
+	NSRange rangeInRaw;
 
-- (void)testGetRangeInRawValueFromRangeInFormattedValue
-{
-	[_genericTestCase testGetRangeInRawValueFromRangeInFormattedValue];
+	rangeInRaw = [formatter rangeInRawValueForRange:NSMakeRange(0, 3) inFormattedValue:@"123"];
+	XCTAssertTrue(NSEqualRanges(rangeInRaw, NSMakeRange(0, 3)));
+
+	rangeInRaw = [formatter rangeInRawValueForRange:NSMakeRange(1, 2) inFormattedValue:@"123"];
+	XCTAssertTrue(NSEqualRanges(rangeInRaw, NSMakeRange(1, 2)));
 }
 
 @end

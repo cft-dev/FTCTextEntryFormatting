@@ -13,11 +13,6 @@
 {
 	self = [super init];
 
-	if( nil == self )
-	{
-		return nil;
-	}
-
 	_maxLength = aLength;
 
 	return self;
