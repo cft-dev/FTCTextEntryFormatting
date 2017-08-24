@@ -32,25 +32,25 @@
 	return self;
 }
 
-- (NSString *)toRawFromFormatted:(NSString *)formattedValue
+- (NSString *)rawFromFormatted:(NSString *)formattedValue
 {
-	return [formatter toRawFromFormatted:formattedValue];
+	return [formatter rawFromFormatted:formattedValue];
 }
 
-- (NSString *)toFormattedFromRaw:(NSString *)rawValue
+- (NSString *)formattedFromRaw:(NSString *)rawValue
 {
 	assert( nil != rawValue );
-	return [formatter toFormattedFromRaw:rawValue];
+	return [formatter formattedFromRaw:rawValue];
 }
 
-- (NSRange)getRangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
+- (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
 {
-	return [formatter getRangeInFormattedValueForRange:rangeInRawValue inRawValue:rawValue];
+	return [formatter rangeInFormattedValueForRange:rangeInRawValue inRawValue:rawValue];
 }
 
-- (NSRange)getRangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
+- (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
 {
-	return [formatter getRangeInRawValueForRange:rangeInFormattedValue inFormattedValue:formattedValue];
+	return [formatter rangeInRawValueForRange:rangeInFormattedValue inFormattedValue:formattedValue];
 }
 
 @end

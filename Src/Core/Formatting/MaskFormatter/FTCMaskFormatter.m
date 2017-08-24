@@ -28,13 +28,13 @@
 	return self;
 }
 
-- (NSString *)toRawFromFormatted:(NSString *)formattedValue
+- (NSString *)rawFromFormatted:(NSString *)formattedValue
 {
 	return [self rawValueStringFromFormattedString:formattedValue
 								  inFormattedRange:NSMakeRange(0, formattedValue.length)];
 }
 
-- (NSString *)toFormattedFromRaw:(NSString *)rawValue
+- (NSString *)formattedFromRaw:(NSString *)rawValue
 {
 	NSString * const format = config.format;
 
@@ -62,7 +62,7 @@
 	return [formattedValue copy];
 }
 
-- (NSRange)getRangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
+- (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
 {
 	assert( (rawValue.length >= rangeInRawValue.location + rangeInRawValue.length) && @"Argument 'rangeInRawValue' is out of bounds of 'rawValue'" );
 
@@ -94,8 +94,8 @@
 	}
 }
 
-- (NSRange)getRangeInRawValueForRange:(NSRange)rangeInFormattedValue
-					 inFormattedValue:(NSString *)formattedValue
+- (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue
+                  inFormattedValue:(NSString *)formattedValue
 {
 	NSUInteger symbolsToLocation = [self countOfRawSymbolsInFormattedString:formattedValue
 																	inRange:NSMakeRange(0, rangeInFormattedValue.location)];

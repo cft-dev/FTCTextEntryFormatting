@@ -20,22 +20,22 @@
 	return self;
 }
 
-- (NSString *)toRawFromFormatted:(NSString *)formattedValue
+- (NSString *)rawFromFormatted:(NSString *)formattedValue
 {
 	return formattedValue;
 }
 
-- (NSString *)toFormattedFromRaw:(NSString *)rawValue
+- (NSString *)formattedFromRaw:(NSString *)rawValue
 {
 	return rawValue;
 }
 
-- (NSRange)getRangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
+- (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
 {
 	return rangeInRawValue;
 }
 
-- (NSRange)getRangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
+- (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
 {
 	return rangeInFormattedValue;
 }

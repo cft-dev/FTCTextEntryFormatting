@@ -50,7 +50,7 @@
 	assert( isEditing );
 	assert( (nil != editingFormatter) && @"'editingFormatter' must not be nil here." );
 
-	NSRange replacementRangeInRawValue = [editingFormatter getRangeInRawValueForRange:range inFormattedValue:_formattedValue];
+	NSRange replacementRangeInRawValue = [editingFormatter rangeInRawValueForRange:range inFormattedValue:_formattedValue];
 
 	assert( (nil != _rawValue) || (nil == _rawValue && (replacementRangeInRawValue.location + replacementRangeInRawValue.length == 0)) );
 
@@ -69,7 +69,7 @@
 	const NSRange filteredRange = filteredRawString.range;
 	const NSUInteger lastInsertedCharacterLocation = filteredRange.location + filteredRange.length;
 	currentSelectionRangeInRawValue = NSMakeRange(lastInsertedCharacterLocation, 0);
-	_currentSelectionRangeInFormattedValue = [editingFormatter getRangeInFormattedValueForRange:currentSelectionRangeInRawValue inRawValue:_rawValue];
+	_currentSelectionRangeInFormattedValue = [editingFormatter rangeInFormattedValueForRange:currentSelectionRangeInRawValue inRawValue:_rawValue];
 }
 
 - (void)beginEditing
@@ -90,7 +90,7 @@
 	id<FTCTextEntryFormatter> currentFormatter = isEditing ? editingFormatter : notEditingFormatter;
 	assert( (nil != currentFormatter) && @"'currentFormatter' must not be nil here." );
 
-	_currentSelectionRangeInFormattedValue = [currentFormatter getRangeInFormattedValueForRange:currentSelectionRangeInRawValue inRawValue:_rawValue];
+	_currentSelectionRangeInFormattedValue = [currentFormatter rangeInFormattedValueForRange:currentSelectionRangeInRawValue inRawValue:_rawValue];
 }
 
 - (void)endEditing
@@ -109,7 +109,7 @@
 	id<FTCTextEntryFormatter> currentFormatter = isEditing ? editingFormatter : notEditingFormatter;
 	assert( (nil != currentFormatter) && @"'currentFormatter' must not be nil here." );
 
-	_formattedValue = [currentFormatter toFormattedFromRaw:(nil != _rawValue ? _rawValue : @"")];
+	_formattedValue = [currentFormatter formattedFromRaw:(nil != _rawValue ? _rawValue : @"")];
 }
 
 - (BOOL)isEditing

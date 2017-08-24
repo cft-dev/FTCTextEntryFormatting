@@ -5,10 +5,10 @@
 
 @protocol FTCTextEntryFormatter<NSObject>
 
-- (NSString *)toRawFromFormatted:(NSString *)formattedValue;
-- (NSString *)toFormattedFromRaw:(NSString *)rawValue;
+- (NSString *)rawFromFormatted:(NSString *)formattedValue;
+- (NSString *)formattedFromRaw:(NSString *)rawValue;
 
-- (NSRange)getRangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue;
-- (NSRange)getRangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue;
+- (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue;
+- (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue;
 
 @end

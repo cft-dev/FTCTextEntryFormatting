@@ -34,25 +34,25 @@
 	return self;
 }
 
-- (NSString *)toRawFromFormatted:(NSString *)formattedValue
+- (NSString *)rawFromFormatted:(NSString *)formattedValue
 {
-	return [postfixFormatter toRawFromFormatted:formattedValue];
+	return [postfixFormatter rawFromFormatted:formattedValue];
 }
 
-- (NSString *)toFormattedFromRaw:(NSString *)rawValue
+- (NSString *)formattedFromRaw:(NSString *)rawValue
 {
 	assert( nil != rawValue );
-	return [postfixFormatter toFormattedFromRaw:rawValue];
+	return [postfixFormatter formattedFromRaw:rawValue];
 }
 
-- (NSRange)getRangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
+- (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
 {
-	return [postfixFormatter getRangeInFormattedValueForRange:rangeInRawValue inRawValue:rawValue];
+	return [postfixFormatter rangeInFormattedValueForRange:rangeInRawValue inRawValue:rawValue];
 }
 
-- (NSRange)getRangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
+- (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
 {
-	return [postfixFormatter getRangeInRawValueForRange:rangeInFormattedValue inFormattedValue:formattedValue];
+	return [postfixFormatter rangeInRawValueForRange:rangeInFormattedValue inFormattedValue:formattedValue];
 }
 
 - (BOOL)isEqual:(id)object

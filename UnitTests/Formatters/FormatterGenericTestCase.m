@@ -97,7 +97,7 @@
 		NSString *formattedInputValue = pair.key;
 		NSString *etalonRawOutputValue = pair.value;
 		
-		NSString *rawOutputValue = [_formatter toRawFromFormatted:formattedInputValue];
+		NSString *rawOutputValue = [_formatter rawFromFormatted:formattedInputValue];
 		
 		XCTAssertEqualObjects(etalonRawOutputValue, rawOutputValue, @"formattedInputValue: '%@', etalonRawOutputValue: '%@'", formattedInputValue, etalonRawOutputValue);
 	}
@@ -110,7 +110,7 @@
 		NSString *rawInputValue = pair.key;
 		NSString *etalonFormattedOutputValue = pair.value;
 		
-		NSString *formattedOutputValue = [_formatter toFormattedFromRaw:rawInputValue];
+		NSString *formattedOutputValue = [_formatter formattedFromRaw:rawInputValue];
 		
 		XCTAssertEqualObjects(etalonFormattedOutputValue, formattedOutputValue, @"rawInputValue: '%@', etalonFormattedOutputValue: '%@'", rawInputValue, etalonFormattedOutputValue);
 	}
@@ -124,7 +124,7 @@
 		NSString *rawValue = dict[@"rawValue"];
 		NSRange etalon = NSRangeFromString(dict[@"etalon"]);
 		
-		NSRange rangeInFormattedValue = [_formatter getRangeInFormattedValueForRange:rangeInRawValue inRawValue:rawValue];
+		NSRange rangeInFormattedValue = [_formatter rangeInFormattedValueForRange:rangeInRawValue inRawValue:rawValue];
 		
 		XCTAssert( NSEqualRanges(etalon, rangeInFormattedValue), @"%@ rangeInFormattedValue: '%@'", dict, NSStringFromRange(rangeInFormattedValue) );
 	}
@@ -138,7 +138,7 @@
 		NSString *formattedValue = dict[@"formattedValue"];
 		NSRange etalon = NSRangeFromString(dict[@"etalon"]);
 		
-		NSRange rangeInRawValue = [_formatter getRangeInRawValueForRange:rangeInFormattedValue inFormattedValue:formattedValue];
+		NSRange rangeInRawValue = [_formatter rangeInRawValueForRange:rangeInFormattedValue inFormattedValue:formattedValue];
 		
 		XCTAssert( NSEqualRanges(etalon, rangeInRawValue), @"%@ rangeInRawValue: '%@'", dict, NSStringFromRange(rangeInRawValue) );
 	}
