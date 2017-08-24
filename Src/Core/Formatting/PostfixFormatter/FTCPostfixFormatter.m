@@ -27,7 +27,7 @@
 	return self;
 }
 
-- (NSString *)toRawFromFormatted:(NSString *)formattedValue
+- (NSString *)rawFromFormatted:(NSString *)formattedValue
 {
 	if( NO == [self canShowPostfix] )
 	{
@@ -49,7 +49,7 @@
 	return result;
 }
 
-- (NSString *)toFormattedFromRaw:(NSString *)rawValue
+- (NSString *)formattedFromRaw:(NSString *)rawValue
 {
 	assert( nil != rawValue );
 
@@ -61,14 +61,14 @@
 	return [rawValue stringByAppendingString:_postfix];
 }
 
-- (NSRange)getRangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
+- (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
 {
 	assert( (rawValue.length >= rangeInRawValue.location + rangeInRawValue.length) && @"Argument 'rangeInRawValue' is out of bounds of 'rawValue'" );
 
 	return rangeInRawValue;
 }
 
-- (NSRange)getRangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
+- (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
 {
 	assert( (formattedValue.length >= rangeInFormattedValue.location + rangeInFormattedValue.length) &&
 			@"Argument 'rangeInFormattedValue' is out of bounds of 'formattedValue'" );
