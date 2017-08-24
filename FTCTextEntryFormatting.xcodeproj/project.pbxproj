@@ -86,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B1370D1E1F4E849800E8EBA3 /* FTCTextEntryFormatting-prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTCTextEntryFormatting-prefix.pch"; sourceTree = "<group>"; };
 		B1EBF8DD1F2315F90014F4CB /* FTCTextEntryFormatting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FTCTextEntryFormatting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EBF8E61F2315F90014F4CB /* FTCTextEntryFormattingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTCTextEntryFormattingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1EBF8F91F2316410014F4CB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -182,6 +183,7 @@
 		B1EBF8D31F2315F90014F4CB = {
 			isa = PBXGroup;
 			children = (
+				B1370D1E1F4E849800E8EBA3 /* FTCTextEntryFormatting-prefix.pch */,
 				B1EBF9CA1F23186D0014F4CB /* FTCTextEntryFormatting.podspec */,
 				B1EBF8FB1F2316410014F4CB /* Src */,
 				B1EBF8FA1F2316410014F4CB /* Info.plist */,
@@ -701,6 +703,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "FTCTextEntryFormatting-prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -718,6 +721,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "FTCTextEntryFormatting-prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -2,7 +2,6 @@
 // Created by Andrey Sikerin on 11/14/13.
 // Copyright (c) 2013 FTC. All rights reserved.
 
-@import Foundation;
 @import UIKit;
 
 @interface FTCTextInputUtils : NSObject

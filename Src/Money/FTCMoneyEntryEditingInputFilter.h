@@ -3,8 +3,6 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-@import Foundation;
-
 #import "FTCTextEntryEditingInputFilter.h"
 
 NS_ASSUME_NONNULL_BEGIN

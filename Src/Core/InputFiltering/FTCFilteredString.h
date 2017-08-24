@@ -3,8 +3,6 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-@import Foundation;
-
 @interface FTCFilteredString : NSObject
 
 @property (nonatomic, readonly) NSString *string;

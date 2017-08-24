@@ -3,8 +3,6 @@
 // Copyright (c) 2015 CFT. All rights reserved.
 //
 
-@import Foundation;
-
 #import "FTCTextEntryEditingInputFilter.h"
 #import "FTCTextEntryNotEditingInputFilter.h"
 

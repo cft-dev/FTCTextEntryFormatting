@@ -3,8 +3,6 @@
 // Copyright (c) 2016 FTC. All rights reserved.
 //
 
-@import Foundation;
-
 @class FTCTextEntryFormattingConfig;
 @protocol FTCTextEntry;
 
