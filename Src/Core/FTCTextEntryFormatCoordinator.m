@@ -119,7 +119,7 @@
 
 - (void)setRawValue:(NSString *)rawValue
 {
-//	assert( NO == isEditing );
+	assert( NO == isEditing );
 
 	[self doSetRawValue:rawValue];
 }
