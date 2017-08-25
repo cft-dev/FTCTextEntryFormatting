@@ -11,11 +11,6 @@
 {
 	self = [super init];
 
-	if(nil == self)
-	{
-		return nil;
-	}
-
 	_string = string;
 	_range = range;
 

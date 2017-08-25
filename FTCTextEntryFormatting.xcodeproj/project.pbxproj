@@ -39,12 +39,6 @@
 		B1EBF9601F2316410014F4CB /* FTCTextFieldFormatCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9221F2316410014F4CB /* FTCTextFieldFormatCoordinator.m */; };
 		B1EBF9611F2316410014F4CB /* FTCTextInputUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF9231F2316410014F4CB /* FTCTextInputUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1EBF9621F2316410014F4CB /* FTCTextInputUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9241F2316410014F4CB /* FTCTextInputUtils.m */; };
-		B1EBF9631F2316410014F4CB /* FTCMobilePhoneFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF9271F2316410014F4CB /* FTCMobilePhoneFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1EBF9641F2316410014F4CB /* FTCMobilePhoneFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9281F2316410014F4CB /* FTCMobilePhoneFormatter.m */; };
-		B1EBF9651F2316410014F4CB /* FTCMobilePhoneFormatterConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF9291F2316410014F4CB /* FTCMobilePhoneFormatterConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1EBF9661F2316410014F4CB /* FTCMobilePhoneFormatterConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF92A1F2316410014F4CB /* FTCMobilePhoneFormatterConfig.m */; };
-		B1EBF9671F2316410014F4CB /* FTCMobilePhoneInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF92B1F2316410014F4CB /* FTCMobilePhoneInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1EBF9681F2316410014F4CB /* FTCMobilePhoneInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF92C1F2316410014F4CB /* FTCMobilePhoneInputFilter.m */; };
 		B1EBF9691F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF92E1F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1EBF96A1F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF92F1F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.m */; };
 		B1EBF96B1F2316410014F4CB /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF9301F2316410014F4CB /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -65,14 +59,12 @@
 		B1EBF97A1F2316410014F4CB /* NSString+FTCTextEntryFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9401F2316410014F4CB /* NSString+FTCTextEntryFormatting.m */; };
 		B1EBF9BF1F2317430014F4CB /* FormatCoordinatorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9B11F2317430014F4CB /* FormatCoordinatorTestCase.m */; };
 		B1EBF9C91F23179C0014F4CB /* FTCTextEntryFormatting.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF9C81F23179C0014F4CB /* FTCTextEntryFormatting.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1EBF9D81F231C190014F4CB /* FormatterGenericTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9CD1F231C190014F4CB /* FormatterGenericTestCase.m */; };
-		B1EBF9D91F231C190014F4CB /* FTCMaskFormatterGenericConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D01F231C190014F4CB /* FTCMaskFormatterGenericConfig.m */; };
-		B1EBF9DA1F231C190014F4CB /* FTCMaskFormatterTestCase1.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D11F231C190014F4CB /* FTCMaskFormatterTestCase1.m */; };
-		B1EBF9DB1F231C190014F4CB /* FTCMaskFormatterTestCase2.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D21F231C190014F4CB /* FTCMaskFormatterTestCase2.m */; };
-		B1EBF9DC1F231C190014F4CB /* FTCMaskFormatterTestCase3.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D31F231C190014F4CB /* FTCMaskFormatterTestCase3.m */; };
+		B1EBF9DA1F231C190014F4CB /* FTCMaskFormatterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D11F231C190014F4CB /* FTCMaskFormatterTestCase.m */; };
 		B1EBF9DD1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithEmptyPostfix.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D51F231C190014F4CB /* FTCPostfixFormatterTestCaseWithEmptyPostfix.m */; };
 		B1EBF9DE1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNilPostfix.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D61F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNilPostfix.m */; };
 		B1EBF9DF1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D71F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m */; };
+		CCC1C0B14A2C0AF523465DB5 /* FTCMaskFormatterGenericConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CCC1C3A298D5610F9EAECBC1 /* FTCMaskFormatterGenericConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CCC1CD063EECBF9CCDDE12F9 /* FTCMaskFormatterGenericConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC1CD7598485396BE2F9CEF /* FTCMaskFormatterGenericConfig.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,12 +114,6 @@
 		B1EBF9221F2316410014F4CB /* FTCTextFieldFormatCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextFieldFormatCoordinator.m; sourceTree = "<group>"; };
 		B1EBF9231F2316410014F4CB /* FTCTextInputUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextInputUtils.h; sourceTree = "<group>"; };
 		B1EBF9241F2316410014F4CB /* FTCTextInputUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextInputUtils.m; sourceTree = "<group>"; };
-		B1EBF9271F2316410014F4CB /* FTCMobilePhoneFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMobilePhoneFormatter.h; sourceTree = "<group>"; };
-		B1EBF9281F2316410014F4CB /* FTCMobilePhoneFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMobilePhoneFormatter.m; sourceTree = "<group>"; };
-		B1EBF9291F2316410014F4CB /* FTCMobilePhoneFormatterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMobilePhoneFormatterConfig.h; sourceTree = "<group>"; };
-		B1EBF92A1F2316410014F4CB /* FTCMobilePhoneFormatterConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMobilePhoneFormatterConfig.m; sourceTree = "<group>"; };
-		B1EBF92B1F2316410014F4CB /* FTCMobilePhoneInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMobilePhoneInputFilter.h; sourceTree = "<group>"; };
-		B1EBF92C1F2316410014F4CB /* FTCMobilePhoneInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMobilePhoneInputFilter.m; sourceTree = "<group>"; };
 		B1EBF92E1F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCIntegralMoneyAmountEntryEditingInputFilter.h; sourceTree = "<group>"; };
 		B1EBF92F1F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCIntegralMoneyAmountEntryEditingInputFilter.m; sourceTree = "<group>"; };
 		B1EBF9301F2316410014F4CB /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCIntegralMoneyAmountEntryNotEditingInputFilter.h; sourceTree = "<group>"; };
@@ -149,16 +135,12 @@
 		B1EBF9B11F2317430014F4CB /* FormatCoordinatorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatCoordinatorTestCase.m; sourceTree = "<group>"; };
 		B1EBF9C81F23179C0014F4CB /* FTCTextEntryFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormatting.h; sourceTree = "<group>"; };
 		B1EBF9CA1F23186D0014F4CB /* FTCTextEntryFormatting.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FTCTextEntryFormatting.podspec; sourceTree = "<group>"; };
-		B1EBF9CC1F231C190014F4CB /* FormatterGenericTestCase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormatterGenericTestCase.h; sourceTree = "<group>"; };
-		B1EBF9CD1F231C190014F4CB /* FormatterGenericTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormatterGenericTestCase.m; sourceTree = "<group>"; };
-		B1EBF9CF1F231C190014F4CB /* FTCMaskFormatterGenericConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMaskFormatterGenericConfig.h; sourceTree = "<group>"; };
-		B1EBF9D01F231C190014F4CB /* FTCMaskFormatterGenericConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterGenericConfig.m; sourceTree = "<group>"; };
-		B1EBF9D11F231C190014F4CB /* FTCMaskFormatterTestCase1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterTestCase1.m; sourceTree = "<group>"; };
-		B1EBF9D21F231C190014F4CB /* FTCMaskFormatterTestCase2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterTestCase2.m; sourceTree = "<group>"; };
-		B1EBF9D31F231C190014F4CB /* FTCMaskFormatterTestCase3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterTestCase3.m; sourceTree = "<group>"; };
+		B1EBF9D11F231C190014F4CB /* FTCMaskFormatterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterTestCase.m; sourceTree = "<group>"; };
 		B1EBF9D51F231C190014F4CB /* FTCPostfixFormatterTestCaseWithEmptyPostfix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCPostfixFormatterTestCaseWithEmptyPostfix.m; sourceTree = "<group>"; };
 		B1EBF9D61F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNilPostfix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCPostfixFormatterTestCaseWithNilPostfix.m; sourceTree = "<group>"; };
 		B1EBF9D71F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m; sourceTree = "<group>"; };
+		CCC1C3A298D5610F9EAECBC1 /* FTCMaskFormatterGenericConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMaskFormatterGenericConfig.h; sourceTree = "<group>"; };
+		CCC1CD7598485396BE2F9CEF /* FTCMaskFormatterGenericConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterGenericConfig.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +197,6 @@
 			isa = PBXGroup;
 			children = (
 				B1EBF8FE1F2316410014F4CB /* Core */,
-				B1EBF9261F2316410014F4CB /* MobilePhone */,
 				B1EBF92D1F2316410014F4CB /* Money */,
 				B1EBF93C1F2316410014F4CB /* Tools */,
 				B1EBF9C81F23179C0014F4CB /* FTCTextEntryFormatting.h */,
@@ -261,6 +242,8 @@
 				B1EBF9041F2316410014F4CB /* FTCMaskFormatter.h */,
 				B1EBF9051F2316410014F4CB /* FTCMaskFormatter.m */,
 				B1EBF9061F2316410014F4CB /* FTCMaskFormatterConfig.h */,
+				CCC1C3A298D5610F9EAECBC1 /* FTCMaskFormatterGenericConfig.h */,
+				CCC1CD7598485396BE2F9CEF /* FTCMaskFormatterGenericConfig.m */,
 			);
 			path = MaskFormatter;
 			sourceTree = "<group>";
@@ -317,19 +300,6 @@
 			path = ToUpperCaseInputFilter;
 			sourceTree = "<group>";
 		};
-		B1EBF9261F2316410014F4CB /* MobilePhone */ = {
-			isa = PBXGroup;
-			children = (
-				B1EBF9271F2316410014F4CB /* FTCMobilePhoneFormatter.h */,
-				B1EBF9281F2316410014F4CB /* FTCMobilePhoneFormatter.m */,
-				B1EBF9291F2316410014F4CB /* FTCMobilePhoneFormatterConfig.h */,
-				B1EBF92A1F2316410014F4CB /* FTCMobilePhoneFormatterConfig.m */,
-				B1EBF92B1F2316410014F4CB /* FTCMobilePhoneInputFilter.h */,
-				B1EBF92C1F2316410014F4CB /* FTCMobilePhoneInputFilter.m */,
-			);
-			path = MobilePhone;
-			sourceTree = "<group>";
-		};
 		B1EBF92D1F2316410014F4CB /* Money */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,8 +343,6 @@
 		B1EBF9CB1F231C190014F4CB /* Formatters */ = {
 			isa = PBXGroup;
 			children = (
-				B1EBF9CC1F231C190014F4CB /* FormatterGenericTestCase.h */,
-				B1EBF9CD1F231C190014F4CB /* FormatterGenericTestCase.m */,
 				B1EBF9CE1F231C190014F4CB /* FTCMaskFormatter */,
 				B1EBF9D41F231C190014F4CB /* FTCPostfixFormatter */,
 			);
@@ -384,11 +352,7 @@
 		B1EBF9CE1F231C190014F4CB /* FTCMaskFormatter */ = {
 			isa = PBXGroup;
 			children = (
-				B1EBF9CF1F231C190014F4CB /* FTCMaskFormatterGenericConfig.h */,
-				B1EBF9D01F231C190014F4CB /* FTCMaskFormatterGenericConfig.m */,
-				B1EBF9D11F231C190014F4CB /* FTCMaskFormatterTestCase1.m */,
-				B1EBF9D21F231C190014F4CB /* FTCMaskFormatterTestCase2.m */,
-				B1EBF9D31F231C190014F4CB /* FTCMaskFormatterTestCase3.m */,
+				B1EBF9D11F231C190014F4CB /* FTCMaskFormatterTestCase.m */,
 			);
 			path = FTCMaskFormatter;
 			sourceTree = "<group>";
@@ -415,7 +379,6 @@
 				B1EBF9551F2316410014F4CB /* FTCFilteredString.h in Headers */,
 				B1EBF9711F2316410014F4CB /* FTCMoneyEntryFormatUtils.h in Headers */,
 				B1EBF94C1F2316410014F4CB /* FTCTextEntry.h in Headers */,
-				B1EBF9651F2316410014F4CB /* FTCMobilePhoneFormatterConfig.h in Headers */,
 				B1EBF95B1F2316410014F4CB /* FTCLimitedLengthInputFilter.h in Headers */,
 				B1EBF96D1F2316410014F4CB /* FTCMoneyEntryEditingFormatter.h in Headers */,
 				B1EBF9471F2316410014F4CB /* FTCMaskFormatter.h in Headers */,
@@ -432,15 +395,14 @@
 				B1EBF94F1F2316410014F4CB /* FTCTextEntryFormatCoordinatorHelper.h in Headers */,
 				B1EBF9691F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.h in Headers */,
 				B1EBF94D1F2316410014F4CB /* FTCTextEntryFormatCoordinator.h in Headers */,
-				B1EBF9631F2316410014F4CB /* FTCMobilePhoneFormatter.h in Headers */,
 				B1EBF9C91F23179C0014F4CB /* FTCTextEntryFormatting.h in Headers */,
 				B1EBF9791F2316410014F4CB /* NSString+FTCTextEntryFormatting.h in Headers */,
 				B1EBF9771F2316410014F4CB /* FTCTextEntryFormattingStringUtils.h in Headers */,
 				B1EBF9461F2316410014F4CB /* FTCTextEntryFormatter.h in Headers */,
-				B1EBF9671F2316410014F4CB /* FTCMobilePhoneInputFilter.h in Headers */,
 				B1EBF94A1F2316410014F4CB /* FTCPostfixFormatter.h in Headers */,
 				B1EBF95D1F2316410014F4CB /* FTCToUpperCaseInputFilter.h in Headers */,
 				B1EBF95F1F2316410014F4CB /* FTCTextFieldFormatCoordinator.h in Headers */,
+				CCC1C0B14A2C0AF523465DB5 /* FTCMaskFormatterGenericConfig.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -546,7 +508,6 @@
 				B1EBF9761F2316410014F4CB /* FTCMoneyEntryNotEditingInputFilter.m in Sources */,
 				B1EBF9561F2316410014F4CB /* FTCFilteredString.m in Sources */,
 				B1EBF95C1F2316410014F4CB /* FTCLimitedLengthInputFilter.m in Sources */,
-				B1EBF9661F2316410014F4CB /* FTCMobilePhoneFormatterConfig.m in Sources */,
 				B1EBF9501F2316410014F4CB /* FTCTextEntryFormatCoordinatorHelper.m in Sources */,
 				B1EBF9451F2316410014F4CB /* FTCNoFormattingFormatter.m in Sources */,
 				B1EBF96C1F2316410014F4CB /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.m in Sources */,
@@ -558,15 +519,14 @@
 				B1EBF9701F2316410014F4CB /* FTCMoneyEntryEditingInputFilter.m in Sources */,
 				B1EBF97A1F2316410014F4CB /* NSString+FTCTextEntryFormatting.m in Sources */,
 				B1EBF96A1F2316410014F4CB /* FTCIntegralMoneyAmountEntryEditingInputFilter.m in Sources */,
-				B1EBF9681F2316410014F4CB /* FTCMobilePhoneInputFilter.m in Sources */,
 				B1EBF95E1F2316410014F4CB /* FTCToUpperCaseInputFilter.m in Sources */,
 				B1EBF9581F2316410014F4CB /* FTCNoFilteringFilter.m in Sources */,
 				B1EBF9621F2316410014F4CB /* FTCTextInputUtils.m in Sources */,
 				B1EBF9781F2316410014F4CB /* FTCTextEntryFormattingStringUtils.m in Sources */,
 				B1EBF9721F2316410014F4CB /* FTCMoneyEntryFormatUtils.m in Sources */,
-				B1EBF9641F2316410014F4CB /* FTCMobilePhoneFormatter.m in Sources */,
 				B1EBF9601F2316410014F4CB /* FTCTextFieldFormatCoordinator.m in Sources */,
 				B1EBF9521F2316410014F4CB /* FTCTextEntryFormattingConfig.m in Sources */,
+				CCC1CD063EECBF9CCDDE12F9 /* FTCMaskFormatterGenericConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,12 +534,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1EBF9DB1F231C190014F4CB /* FTCMaskFormatterTestCase2.m in Sources */,
-				B1EBF9DA1F231C190014F4CB /* FTCMaskFormatterTestCase1.m in Sources */,
-				B1EBF9D91F231C190014F4CB /* FTCMaskFormatterGenericConfig.m in Sources */,
-				B1EBF9D81F231C190014F4CB /* FormatterGenericTestCase.m in Sources */,
+				B1EBF9DA1F231C190014F4CB /* FTCMaskFormatterTestCase.m in Sources */,
 				B1EBF9DE1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNilPostfix.m in Sources */,
-				B1EBF9DC1F231C190014F4CB /* FTCMaskFormatterTestCase3.m in Sources */,
 				B1EBF9DF1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m in Sources */,
 				B1EBF9DD1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithEmptyPostfix.m in Sources */,
 				B1EBF9BF1F2317430014F4CB /* FormatCoordinatorTestCase.m in Sources */,

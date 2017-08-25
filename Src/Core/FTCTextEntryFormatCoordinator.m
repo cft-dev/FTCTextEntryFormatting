@@ -26,10 +26,6 @@
 - (instancetype)init
 {
 	self = [super init];
-	if( nil == self )
-	{
-		return nil;
-	}
 
 	[self applyDefaultConfig];
 

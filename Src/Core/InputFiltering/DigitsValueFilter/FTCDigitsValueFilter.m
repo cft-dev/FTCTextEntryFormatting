@@ -13,17 +13,12 @@
 {
 	self = [super init];
 	
-	if( nil == self )
-	{
-		return nil;
-	}
-	
 	_maxLength = aLength;
 
 	return self;
 }
 
-- (FTCFilteredString *)replaceSubstringInString:(NSString *)originalString atRange:(NSRange)range withString:(NSString *)replacement
+- (FTCFilteredString *)replaceSubstringInString:(NSString *)originalString atRange:(NSRange)range withString:(NSString *)replacement shouldTrim:(BOOL)shouldTrim
 {
 	assert( (nil != originalString) && @"Argument 'originalString' must not be nil." );
 	assert( (nil != replacement) && @"Argument 'replacement' must not be nil." );
@@ -31,6 +26,11 @@
 	NSString *filteredReplacement = [FTCTextEntryFormattingStringUtils stringWithDecimalDigitsFromString:replacement];
 
 	NSString *filteredString = [originalString stringByReplacingCharactersInRange:range withString:filteredReplacement];
+
+	if( shouldTrim && (filteredString.length > _maxLength) )
+	{
+		filteredString = [filteredString substringFromIndex:filteredString.length - _maxLength];
+	}
 
 	if( 0 == _maxLength || filteredString.length <= _maxLength )
 	{
@@ -42,11 +42,16 @@
 	}
 }
 
+- (FTCFilteredString *)replaceSubstringInString:(NSString *)originalString atRange:(NSRange)range withString:(NSString *)replacement
+{
+	return [self replaceSubstringInString:originalString atRange:range withString:replacement shouldTrim:NO];
+}
+
 - (NSString *)filterString:(NSString *)string
 {
 	assert( nil != string );
 
-	return [self replaceSubstringInString:@"" atRange:NSMakeRange(0, 0) withString:string].string;
+	return [self replaceSubstringInString:@"" atRange:NSMakeRange(0, 0) withString:string shouldTrim:YES].string;
 }
 
 - (instancetype)init

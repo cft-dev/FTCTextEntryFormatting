@@ -3,12 +3,11 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
-#import "FTCMobilePhoneFormatterConfig.h"
+#import "FTCMaskFormatterGenericConfig.h"
 
-@implementation FTCMobilePhoneFormatterConfig
+@implementation FTCMaskFormatterGenericConfig
 
 @synthesize format = _format;
-@synthesize cutTail = _cutTail;
 
 - (instancetype)init
 {
@@ -21,11 +20,6 @@
 	assert( nil != format );
 
 	self = [super init];
-
-	if( nil == self )
-	{
-		return nil;
-	}
 
 	_format = format;
 	_maskCharacter = '_';

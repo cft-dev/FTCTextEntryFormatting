@@ -18,11 +18,6 @@
 
 	self = [super init];
 
-	if( nil == self )
-	{
-		return nil;
-	}
-
 	config = aConfig;
 
 	return self;

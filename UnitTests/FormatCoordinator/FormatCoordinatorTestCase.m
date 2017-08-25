@@ -29,39 +29,39 @@
 	[super tearDown];
 }
 
-- (void)testSetNilRawValue
+- (void)test_set_nil_rawValue
 {
 	coordinator.rawValue = nil;
 	
 	XCTAssert( nil == coordinator.rawValue );
 }
 
-- (void)testSetEmptyRawValue
+- (void)test_set_empty_rawValue
 {
 	[self checkRawValueAfterSetRawValue:@""];
 }
 
-- (void)testSetNotEmptyRawValue
+- (void)test_set_not_empty_rawValue
 {
 	[self checkRawValueAfterSetRawValue:@"value"];
 }
 
-- (void)testFormattedValueForNilRawValue
+- (void)test_formattedValue_for_nil_rawValue
 {
 	[self checkFormattedValue:@"" afterSetRawValue:nil];
 }
 
-- (void)testEmptyFormattedValue
+- (void)test_empty_formattedValue
 {
 	[self checkFormattedValue:@"" afterSetRawValue:@""];
 }
 
-- (void)testNotEmptyFormattedValue
+- (void)test_not_empty_formattedValue
 {
 	[self checkFormattedValue:@"value" afterSetRawValue:@"value"];
 }
 
-- (void)testAppendDataToNilRawValue
+- (void)test_append_data_to_nil_rawValue
 {
 	NSString *replacement = @"value";
 	NSString *etalonRawValue = @"value";
@@ -77,7 +77,7 @@
 	XCTAssertEqualObjects(etalonRawValue, coordinator.rawValue);
 }
 
-- (void)testInsertToRawValue
+- (void)test_insert_to_rawValue
 {
 	[self checkRawValue:@"1value2"
 	  replaceInRawValue:@"12"
@@ -85,7 +85,7 @@
 	    withReplacement:@"value"];
 }
 
-- (void)testReplaceInRawValue
+- (void)test_replace_in_rawValue
 {
 	[self checkRawValue:@"1aaaa2"
 	  replaceInRawValue:@"1value2"
@@ -93,7 +93,7 @@
 	    withReplacement:@"aaaa"];
 }
 
-- (void)testRemoveInRawValue
+- (void)test_remove_in_rawValue
 {
 	[self checkRawValue:@"12"
 	  replaceInRawValue:@"1value2"
@@ -101,7 +101,7 @@
 	    withReplacement:@""];
 }
 
-- (void)testInsertToFormateedValue
+- (void)test_insert_to_formattedValue
 {
 	[self checkFormattedValue:@"1value2"
 	        replaceInRawValue:@"12"
@@ -109,7 +109,7 @@
 	          withReplacement:@"value"];
 }
 
-- (void)testReplaceInFormattedValue
+- (void)test_replace_in_formattedValue
 {
 	[self checkFormattedValue:@"1aaaa2"
 	        replaceInRawValue:@"1value2"
@@ -117,7 +117,7 @@
 	          withReplacement:@"aaaa"];
 }
 
-- (void)testRemoveInFormattedValue
+- (void)test_remove_in_formattedValue
 {
 	[self checkFormattedValue:@"12"
 	        replaceInRawValue:@"1value2"
@@ -125,17 +125,19 @@
 	          withReplacement:@""];
 }
 
-- (void)testSelection
+- (void)test_selection
 {
 	NSString *rawValue = @"1value2";
 	NSRange range = NSMakeRange(1, 5);
 	NSString *replacement = @"aaaa";
 	NSRange etalonSelection = NSMakeRange(5, 0);
-	
-	[self doRaplaceInRawValue:rawValue atRange:range withReplacement:replacement];
+
+	[self doReplaceInRawValue:rawValue atRange:range withReplacement:replacement];
 	
 	XCTAssert( NSEqualRanges(etalonSelection, coordinator.currentSelectionRangeInFormattedValue) );
 }
+
+// MARK: Helpers
 
 - (void)checkRawValueAfterSetRawValue:(NSString *)rawValue
 {
@@ -156,7 +158,7 @@
               atRange:(NSRange)range
       withReplacement:(NSString *)replacement
 {
-	[self doRaplaceInRawValue:rawValue atRange:range withReplacement:replacement];
+	[self doReplaceInRawValue:rawValue atRange:range withReplacement:replacement];
 	
 	XCTAssertEqualObjects(etalonRawValue, coordinator.rawValue,
 	                      @"\n resultRawValue: '%@'\n etalonRawValue: '%@'\n rawValue: '%@'\n range: '%@'\n replacement: '%@'",
@@ -168,14 +170,14 @@
                     atRange:(NSRange)range
             withReplacement:(NSString *)replacement
 {
-	[self doRaplaceInRawValue:rawValue atRange:range withReplacement:replacement];
+	[self doReplaceInRawValue:rawValue atRange:range withReplacement:replacement];
 	
 	XCTAssertEqualObjects(etalonFormattedValue, coordinator.formattedValue,
 	                      @"\n formattedValue: '%@'\n etalonFormattedValue: '%@'\n rawValue: '%@'\n range: '%@'\n replacement: '%@'",
 	                      coordinator.formattedValue, etalonFormattedValue, rawValue, NSStringFromRange(range), replacement);
 }
 
-- (void)doRaplaceInRawValue:(NSString *)rawValue atRange:(NSRange)range withReplacement:(NSString *)replacement
+- (void)doReplaceInRawValue:(NSString *)rawValue atRange:(NSRange)range withReplacement:(NSString *)replacement
 {
 	coordinator.rawValue = rawValue;
 	

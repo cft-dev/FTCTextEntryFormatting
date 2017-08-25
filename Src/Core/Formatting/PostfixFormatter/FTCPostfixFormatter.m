@@ -17,11 +17,6 @@
 {
 	self = [super init];
 
-	if(nil == self)
-	{
-		return nil;
-	}
-
 	_postfix = postfix;
 
 	return self;
