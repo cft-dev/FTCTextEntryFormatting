@@ -5,8 +5,12 @@
 
 @import Foundation;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol FTCTextEntryNotEditingInputFilter<NSObject>
 
 - (NSString *)filterString:(NSString *)string;
 
 @end
+
+NS_ASSUME_NONNULL_END

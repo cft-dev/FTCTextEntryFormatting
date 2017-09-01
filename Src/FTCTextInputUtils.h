@@ -4,6 +4,8 @@
 
 @import UIKit;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FTCTextInputUtils : NSObject
 
 + (void)selectTextInTextInput:(id<UITextInput>)textInput atRange:(NSRange)selectionRange NS_SWIFT_NAME( selectText(in:at:) );
@@ -16,3 +18,5 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END

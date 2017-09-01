@@ -5,6 +5,8 @@
 
 @class FTCFilteredString;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol FTCTextEntryEditingInputFilter<NSObject>
 
 - (FTCFilteredString *)replaceSubstringInString:(NSString *)originalString
@@ -12,3 +14,5 @@
                                      withString:(NSString *)replacement;
 
 @end
+
+NS_ASSUME_NONNULL_END

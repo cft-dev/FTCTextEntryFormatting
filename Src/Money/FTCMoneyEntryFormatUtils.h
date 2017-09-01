@@ -3,6 +3,8 @@
 // Copyright (c) 2015 FTC. All rights reserved.
 //
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FTCMoneyEntryFormatUtils : NSObject
 
 + (NSString *)trimZeroHeadFromString:(NSString *const)string;
@@ -19,3 +21,5 @@
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END

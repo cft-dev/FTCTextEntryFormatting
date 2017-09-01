@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, nullable, copy) void (^didChangeValueHandler)();
 @property (nonatomic, nullable, copy) NSString *rawValue;
-@property (nonatomic, nullable, readonly) NSString *formattedValue;
+@property (nonatomic, readonly) NSString *formattedValue;
 
 /*!
  * Устанавливает delegate у textField. Используйте поле textFieldDelegate если необходим delegate.

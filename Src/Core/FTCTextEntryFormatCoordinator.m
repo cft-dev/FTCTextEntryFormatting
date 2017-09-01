@@ -137,7 +137,7 @@
 	[self doSetRawValue:_rawValue];
 }
 
-- (void)doSetRawValue:(NSString *)rawValue
+- (void)doSetRawValue:(nullable NSString *)rawValue
 {
 	_rawValue = [self filterValue:rawValue];
 
@@ -145,7 +145,7 @@
 	[self moveCaretToTheEndOfRawValue];
 }
 
-- (NSString *)filterValue:(NSString *)value
+- (nullable NSString *)filterValue:(nullable NSString *)value
 {
 	assert( (nil != notEditingInputFilter) && @"'notEditingInputFilter' must not be nil here." );
 

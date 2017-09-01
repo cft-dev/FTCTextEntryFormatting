@@ -47,11 +47,9 @@
 
 - (NSString *)formattedFromRaw:(NSString *)rawValue
 {
-	assert( nil != rawValue );
-
 	if( NO == [self canShowPostfixForString:rawValue] )
 	{
-		return rawValue;
+		return (rawValue != nil ? rawValue : @"");
 	}
 
 	return [postfixFormatter formattedFromRaw:rawValue];
@@ -72,7 +70,7 @@
 	return rangeInFormattedValue;
 }
 
-- (BOOL)canShowPostfixForString:(NSString *)string
+- (BOOL)canShowPostfixForString:(nullable NSString *)string
 {
 	if(0 == string.length)
 	{

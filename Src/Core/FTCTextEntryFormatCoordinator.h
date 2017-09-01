@@ -5,9 +5,11 @@
 
 @class FTCTextEntryFormattingConfig;
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FTCTextEntryFormatCoordinator : NSObject
 
-@property (nonatomic, strong) NSString *rawValue;
+@property (nonatomic, strong, nullable) NSString *rawValue;
 @property (nonatomic, readonly) NSString *formattedValue;
 
 @property (nonatomic, assign) NSRange currentSelectionRangeInFormattedValue;
@@ -24,3 +26,5 @@
 - (void)applyConfig:(FTCTextEntryFormattingConfig *)config;
 
 @end
+
+NS_ASSUME_NONNULL_END

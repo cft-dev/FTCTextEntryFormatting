@@ -50,7 +50,7 @@ static const int MAX_FRACTIONAL_DIGITS = 2;
 	return [[FTCFilteredString alloc] initWithString:originalString range:NSMakeRange(filteredReplacementRange.location, 0)];
 }
 
-- (BOOL)shouldUseReplacementResult:(NSString *)replacementResult
+- (BOOL)shouldUseReplacementResult:(nonnull NSString *)replacementResult
 {
 	const NSUInteger separatorLocation = [replacementResult rangeOfCharacterFromSet:[FTCMoneyEntryFormatUtils decimalSeparatorsCharacterSet]].location;
 

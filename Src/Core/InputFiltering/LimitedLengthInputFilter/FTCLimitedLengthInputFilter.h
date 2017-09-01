@@ -8,9 +8,13 @@
 #import "FTCTextEntryEditingInputFilter.h"
 #import "FTCTextEntryNotEditingInputFilter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FTCLimitedLengthInputFilter : NSObject<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>
 
 - (instancetype)initWithMaximumLength:(NSUInteger)maximumLength NS_DESIGNATED_INITIALIZER;
 - (instancetype)init NS_UNAVAILABLE;
 
 @end
+
+NS_ASSUME_NONNULL_END
