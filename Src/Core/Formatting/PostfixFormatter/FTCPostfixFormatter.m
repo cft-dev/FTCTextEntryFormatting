@@ -46,14 +46,14 @@
 
 - (NSString *)formattedFromRaw:(NSString *)rawValue
 {
-	assert( nil != rawValue );
+	NSString *result = (rawValue != nil ? rawValue : @"");
 
 	if( NO == [self canShowPostfix] )
 	{
-		return rawValue;
+		return result;
 	}
 
-	return [rawValue stringByAppendingString:_postfix];
+	return [result stringByAppendingString:_postfix];
 }
 
 - (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue

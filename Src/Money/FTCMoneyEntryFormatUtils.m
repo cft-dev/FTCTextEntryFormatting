@@ -19,7 +19,7 @@ static NSString * const DECIMAL_SEPARATORS = @".,";
 	return [string substringFromIndex:zeroHeadLength];
 }
 
-+ (NSRange)zeroHeadRangeForString:(NSString * const)string
++ (NSRange)zeroHeadRangeForString:(nonnull NSString * const)string
 {
 	NSRange zeroHeadRange = NSMakeRange(NSNotFound, 0);
 
@@ -64,7 +64,7 @@ static NSString * const DECIMAL_SEPARATORS = @".,";
 	return [FTCTextEntryFormattingStringUtils removeCharactersOfSet:[FTCMoneyEntryFormatUtils nonMoneyEntryCharacters] fromString:string];
 }
 
-+ (NSCharacterSet *)nonMoneyEntryCharacters
++ (nonnull NSCharacterSet *)nonMoneyEntryCharacters
 {
 	static NSCharacterSet *notAllowedCharacters;
 

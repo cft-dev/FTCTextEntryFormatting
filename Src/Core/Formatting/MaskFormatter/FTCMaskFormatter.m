@@ -127,8 +127,8 @@
 	return position;
 }
 
-- (NSString *)rawValueStringFromFormattedString:(NSString *const)formattedString
-							   inFormattedRange:(const NSRange)range
+- (nonnull NSString *)rawValueStringFromFormattedString:(nullable NSString *const)formattedString
+                                       inFormattedRange:(const NSRange)range
 {
 	NSString * const format = config.format;
 
@@ -146,7 +146,7 @@
 	return [rawString copy];
 }
 
-- (NSUInteger)countOfRawSymbolsInFormattedString:(NSString *const)formattedString
+- (NSUInteger)countOfRawSymbolsInFormattedString:(nullable NSString *const)formattedString
 										 inRange:(const NSRange)range
 {
 	NSString *rawString = [self rawValueStringFromFormattedString:formattedString

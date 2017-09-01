@@ -5,8 +5,12 @@
 
 #import "FTCTextEntryFormatter.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface FTCNoFormattingFormatter : NSObject<FTCTextEntryFormatter>
 
 - (instancetype)init;
 
 @end
+
+NS_ASSUME_NONNULL_END
