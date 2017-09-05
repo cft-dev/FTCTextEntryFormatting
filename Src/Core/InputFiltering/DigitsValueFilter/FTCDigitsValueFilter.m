@@ -27,9 +27,9 @@
 
 	NSString *filteredString = [originalString stringByReplacingCharactersInRange:range withString:filteredReplacement];
 
-	if( shouldTrim && (filteredString.length > _maxLength) )
+	if( shouldTrim && (filteredString.length > _maxLength) && (0 != _maxLength) )
 	{
-		filteredString = [filteredString substringFromIndex:filteredString.length - _maxLength];
+		filteredString = [filteredString substringToIndex:_maxLength];
 	}
 
 	if( 0 == _maxLength || filteredString.length <= _maxLength )
