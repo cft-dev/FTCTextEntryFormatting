@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		21591A1641163D3E4D1A1F34 /* FTCDigitsInputFilterTestCaseWithZeroMaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = F515E4501F5D58CD00AEEC8C /* FTCDigitsInputFilterTestCaseWithZeroMaxLength.m */; };
 		B1EBF8E71F2315F90014F4CB /* FTCTextEntryFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EBF8DD1F2315F90014F4CB /* FTCTextEntryFormatting.framework */; };
 		B1EBF9441F2316410014F4CB /* FTCNoFormattingFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF9001F2316410014F4CB /* FTCNoFormattingFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1EBF9451F2316410014F4CB /* FTCNoFormattingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9011F2316410014F4CB /* FTCNoFormattingFormatter.m */; };
@@ -65,6 +66,7 @@
 		B1EBF9DF1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m in Sources */ = {isa = PBXBuildFile; fileRef = B1EBF9D71F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m */; };
 		CCC1C0B14A2C0AF523465DB5 /* FTCMaskFormatterGenericConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CCC1C3A298D5610F9EAECBC1 /* FTCMaskFormatterGenericConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCC1CD063EECBF9CCDDE12F9 /* FTCMaskFormatterGenericConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC1CD7598485396BE2F9CEF /* FTCMaskFormatterGenericConfig.m */; };
+		F5859D5F1F5E4E1D00607B61 /* FTCDigitsInputFilterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F5859D5E1F5E4E1D00607B61 /* FTCDigitsInputFilterTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +143,8 @@
 		B1EBF9D71F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m; sourceTree = "<group>"; };
 		CCC1C3A298D5610F9EAECBC1 /* FTCMaskFormatterGenericConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMaskFormatterGenericConfig.h; sourceTree = "<group>"; };
 		CCC1CD7598485396BE2F9CEF /* FTCMaskFormatterGenericConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterGenericConfig.m; sourceTree = "<group>"; };
+		F515E4501F5D58CD00AEEC8C /* FTCDigitsInputFilterTestCaseWithZeroMaxLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCDigitsInputFilterTestCaseWithZeroMaxLength.m; path = InputFilter/FTCDigitsInputFilterTestCaseWithZeroMaxLength.m; sourceTree = "<group>"; };
+		F5859D5E1F5E4E1D00607B61 /* FTCDigitsInputFilterTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FTCDigitsInputFilterTestCase.m; path = FormatCoordinator/FTCDigitsInputFilterTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +190,7 @@
 		B1EBF8F71F2316410014F4CB /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				F515E4521F5D58D200AEEC8C /* InputFilter */,
 				B1EBF9B01F2317430014F4CB /* FormatCoordinator */,
 				B1EBF9CB1F231C190014F4CB /* Formatters */,
 				B1EBF8F91F2316410014F4CB /* Info.plist */,
@@ -367,6 +372,15 @@
 			path = FTCPostfixFormatter;
 			sourceTree = "<group>";
 		};
+		F515E4521F5D58D200AEEC8C /* InputFilter */ = {
+			isa = PBXGroup;
+			children = (
+				F5859D5E1F5E4E1D00607B61 /* FTCDigitsInputFilterTestCase.m */,
+				F515E4501F5D58CD00AEEC8C /* FTCDigitsInputFilterTestCaseWithZeroMaxLength.m */,
+			);
+			name = InputFilter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -535,10 +549,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B1EBF9DA1F231C190014F4CB /* FTCMaskFormatterTestCase.m in Sources */,
+				F5859D5F1F5E4E1D00607B61 /* FTCDigitsInputFilterTestCase.m in Sources */,
 				B1EBF9DE1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNilPostfix.m in Sources */,
 				B1EBF9DF1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithNotEmptyPostfix.m in Sources */,
 				B1EBF9DD1F231C190014F4CB /* FTCPostfixFormatterTestCaseWithEmptyPostfix.m in Sources */,
 				B1EBF9BF1F2317430014F4CB /* FormatCoordinatorTestCase.m in Sources */,
+				21591A1641163D3E4D1A1F34 /* FTCDigitsInputFilterTestCaseWithZeroMaxLength.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
