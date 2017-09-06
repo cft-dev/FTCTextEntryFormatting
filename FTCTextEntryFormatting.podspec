@@ -15,4 +15,8 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
 
   spec.ios.deployment_target = '8.0'
+
+  spec.test_spec 'UnitTests' do |test_spec|
+    test_spec.source_files = 'UnitTests/**/*.{h,m}'
+  end
 end
