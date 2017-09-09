@@ -37,6 +37,20 @@
 	return self;
 }
 
+- (instancetype)initWithFormatter:(id<FTCTextEntryFormatter>)formatter
+					  inputFilter:(id<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>)inputFilter
+{
+	self = [self init];
+
+	_editingFormatter = formatter;
+	_editingInputFilter = inputFilter;
+
+	_notEditingFormatter = formatter;
+	_notEditingInputFilter = inputFilter;
+
+	return self;
+}
+
 - (void)setEditingFormatter:(id<FTCTextEntryFormatter>)editingFormatter
 {
 	assert( (nil != editingFormatter) && "Argument 'editingFormatter' must not be nil." );

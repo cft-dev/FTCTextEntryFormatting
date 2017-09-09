@@ -18,27 +18,35 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-@protocol FTCTextEntryFormatter;
-@protocol FTCTextEntryEditingInputFilter;
-@protocol FTCTextEntryNotEditingInputFilter;
+import UIKit
 
-NS_ASSUME_NONNULL_BEGIN
+class EntryViewController: UIViewController
+{
+	@IBOutlet var textField: UITextField!
 
-@interface FTCTextEntryFormattingConfig : NSObject
+	var textFieldFormatCoordinator: FTCTextFieldFormatCoordinator!
 
-@property (nonatomic, strong) id<FTCTextEntryFormatter> editingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryEditingInputFilter> editingInputFilter;
+	var formattingConfig: FTCTextEntryFormattingConfig!
+	var keyboard: UIKeyboardType = .default
 
-@property (nonatomic, strong) id<FTCTextEntryFormatter> notEditingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryNotEditingInputFilter> notEditingInputFilter;
+	override func viewDidLoad()
+	{
+		super.viewDidLoad()
 
-- (BOOL)isEqualToConfig:(FTCTextEntryFormattingConfig *)config;
+		self.textField.keyboardType = self.keyboard
 
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
+		self.textFieldFormatCoordinator = FTCTextFieldFormatCoordinator(textField: self.textField)
 
-- (instancetype)initWithFormatter:(id<FTCTextEntryFormatter>)formatter
-                      inputFilter:(id<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>)inputFilter;
+		self.textFieldFormatCoordinator.apply(formattingConfig: self.formattingConfig)
 
-@end
+		self.textFieldFormatCoordinator.didChangeValueHandler = { [unowned self] in
+			print("rawValue: \(self.textFieldFormatCoordinator.rawValue ?? "nil")")
+			print("formattedValue: \(self.textFieldFormatCoordinator.formattedValue)")
+		}
+	}
 
-NS_ASSUME_NONNULL_END
+	@IBAction func close(_ sender: Any)
+	{
+		self.dismiss(animated: true, completion: nil)
+	}
+}

@@ -18,27 +18,16 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-@protocol FTCTextEntryFormatter;
-@protocol FTCTextEntryEditingInputFilter;
-@protocol FTCTextEntryNotEditingInputFilter;
+import UIKit
 
-NS_ASSUME_NONNULL_BEGIN
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
-@interface FTCTextEntryFormattingConfig : NSObject
+	var window: UIWindow?
 
-@property (nonatomic, strong) id<FTCTextEntryFormatter> editingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryEditingInputFilter> editingInputFilter;
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool
+	{
+		return true
+	}
+}
 
-@property (nonatomic, strong) id<FTCTextEntryFormatter> notEditingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryNotEditingInputFilter> notEditingInputFilter;
-
-- (BOOL)isEqualToConfig:(FTCTextEntryFormattingConfig *)config;
-
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
-
-- (instancetype)initWithFormatter:(id<FTCTextEntryFormatter>)formatter
-                      inputFilter:(id<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>)inputFilter;
-
-@end
-
-NS_ASSUME_NONNULL_END
