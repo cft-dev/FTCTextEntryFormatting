@@ -28,7 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<UITextFieldDelegate> textFieldDelegate;
 
-@property (nonatomic, nullable, copy) void (^didChangeValueHandler)();
+@property (nonatomic, nullable, copy) void (^didChangeValueHandler)(void);
 @property (nonatomic, nullable, copy) NSString *rawValue;
 @property (nonatomic, readonly) NSString *formattedValue;
 

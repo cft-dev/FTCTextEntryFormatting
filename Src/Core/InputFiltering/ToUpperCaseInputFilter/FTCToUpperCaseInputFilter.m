@@ -32,8 +32,8 @@
 
 - (FTCFilteredString *)replaceSubstringInString:(NSString *)originalString atRange:(NSRange)range withString:(NSString *)replacement
 {
-	assert( (nil != originalString) && @"Argument 'originalString' must not be nil." );
-	assert( (nil != replacement) && @"Argument 'replacement' must not be nil." );
+	assert( (nil != originalString) && "Argument 'originalString' must not be nil." );
+	assert( (nil != replacement) && "Argument 'replacement' must not be nil." );
 
 	NSString * const upperCaseReplacement = [replacement uppercaseString];
 

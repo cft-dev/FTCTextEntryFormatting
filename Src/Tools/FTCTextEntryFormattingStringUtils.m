@@ -27,7 +27,7 @@
 #if defined(DEBUG)
 	for( id obj in arrayToJoinStringsFrom )
 	{
-		assert( [obj isKindOfClass:[NSString class]] && @"'obj' is of unexpected class." );
+		assert( [obj isKindOfClass:[NSString class]] && "'obj' is of unexpected class." );
 	}
 #endif // defined(DEBUG)
 

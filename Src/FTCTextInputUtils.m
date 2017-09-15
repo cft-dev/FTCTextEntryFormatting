@@ -68,7 +68,7 @@
 
 - (instancetype)init
 {
-	assert( false && @"Won't happen." );
+	assert( false && "Won't happen." );
 	return nil;
 }
 

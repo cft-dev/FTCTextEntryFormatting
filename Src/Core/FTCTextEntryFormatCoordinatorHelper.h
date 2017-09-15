@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCTextEntryFormatCoordinatorHelper : NSObject
 
-@property (nonatomic, nullable, copy) void (^didChangeValueHandler)();
+@property (nonatomic, nullable, copy) void (^didChangeValueHandler)(void);
 
 @property (nonatomic, nullable, copy) NSString *rawValue;
 

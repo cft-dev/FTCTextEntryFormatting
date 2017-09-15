@@ -39,28 +39,28 @@
 
 - (void)setEditingFormatter:(id<FTCTextEntryFormatter>)editingFormatter
 {
-	assert( (nil != editingFormatter) && @"Argument 'editingFormatter' must not be nil." );
+	assert( (nil != editingFormatter) && "Argument 'editingFormatter' must not be nil." );
 
 	_editingFormatter = editingFormatter;
 }
 
 - (void)setEditingInputFilter:(id<FTCTextEntryEditingInputFilter>)editingInputFilter
 {
-	assert( (nil != editingInputFilter) && @"Argument 'editingInputFilter' must not be nil." );
+	assert( (nil != editingInputFilter) && "Argument 'editingInputFilter' must not be nil." );
 
 	_editingInputFilter = editingInputFilter;
 }
 
 - (void)setNotEditingFormatter:(id<FTCTextEntryFormatter>)notEditingFormatter
 {
-	assert( (nil != notEditingFormatter) && @"Argument 'notEditingFormatter' must not be nil." );
+	assert( (nil != notEditingFormatter) && "Argument 'notEditingFormatter' must not be nil." );
 
 	_notEditingFormatter = notEditingFormatter;
 }
 
 - (void)setNotEditingInputFilter:(id<FTCTextEntryNotEditingInputFilter>)notEditingInputFilter
 {
-	assert( (nil != notEditingInputFilter) && @"Argument 'notEditingInputFilter' must not be nil." );
+	assert( (nil != notEditingInputFilter) && "Argument 'notEditingInputFilter' must not be nil." );
 
 	_notEditingInputFilter = notEditingInputFilter;
 }

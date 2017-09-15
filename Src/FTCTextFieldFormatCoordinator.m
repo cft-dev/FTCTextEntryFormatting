@@ -53,12 +53,12 @@
 
 // MARK: Public
 
-- (void)setDidChangeValueHandler:(void (^)())didChangeValueHandler
+- (void)setDidChangeValueHandler:(void (^)(void))didChangeValueHandler
 {
 	[formatCoordinatorHelper setDidChangeValueHandler: didChangeValueHandler];
 }
 
-- (void (^)())didChangeValueHandler
+- (void (^)(void))didChangeValueHandler
 {
 	return [formatCoordinatorHelper didChangeValueHandler];
 }
