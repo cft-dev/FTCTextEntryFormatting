@@ -127,7 +127,7 @@
 	[formatCoordinatorHelper endEditing];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)aTextField reason:(UITextFieldDidEndEditingReason)reason
+- (void)textFieldDidEndEditing:(UITextField *)aTextField reason:(UITextFieldDidEndEditingReason)reason NS_AVAILABLE_IOS(10_0)
 {
 	if ([self.textFieldDelegate respondsToSelector:@selector(textFieldDidEndEditing:reason:)])
 	{

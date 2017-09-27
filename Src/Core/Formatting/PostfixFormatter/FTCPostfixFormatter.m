@@ -80,8 +80,7 @@
 
 - (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
 {
-	assert( (formattedValue.length >= rangeInFormattedValue.location + rangeInFormattedValue.length) &&
-			@"Argument 'rangeInFormattedValue' is out of bounds of 'formattedValue'" );
+	assert( (formattedValue.length >= rangeInFormattedValue.location + rangeInFormattedValue.length) && "Argument 'rangeInFormattedValue' is out of bounds of 'formattedValue'" );
 
 	NSRange rawRange = rangeInFormattedValue;
 
