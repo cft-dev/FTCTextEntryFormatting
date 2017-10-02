@@ -22,8 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol FTCMaskFormatterConfig<NSObject>
 
-@property (nonatomic, readonly) NSString *format;
+@property (nonatomic, readonly) NSString *mask;
 @property (nonatomic, readonly) unichar maskCharacter;
+@property (nonatomic, readonly) NSUInteger countMaskCharacters;
 @property (nonatomic, readonly) BOOL cutTail;
 
 @end

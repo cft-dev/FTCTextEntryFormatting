@@ -22,25 +22,39 @@
 
 @implementation FTCMaskFormatterGenericConfig
 
-@synthesize format = _format;
+@synthesize mask = _mask;
+@synthesize maskCharacter = _maskCharacter;
+@synthesize countMaskCharacters = _countMaskCharacters;
+
+- (instancetype)initWithFormat:(NSString *)format
+{
+	assert( nil != format );
+	assert( format.length > 1 );
+
+	self = [super init];
+
+	_mask = [format substringFromIndex:1];
+	_maskCharacter = [format characterAtIndex:0];
+	_cutTail = NO;
+
+	NSUInteger countMaskCharacters = 0;
+	for( NSUInteger i = 0; i < _mask.length; ++i )
+	{
+		if( [_mask characterAtIndex:i] == _maskCharacter )
+		{
+			++countMaskCharacters;
+		}
+	}
+
+	_countMaskCharacters = countMaskCharacters;
+
+	return self;
+}
 
 - (instancetype)init
 {
 	assert( false && @"Won't happen" );
 	return nil;
-}
-
-- (instancetype)initWithFormat:(NSString *)format
-{
-	assert( nil != format );
-
-	self = [super init];
-
-	_format = format;
-	_maskCharacter = '_';
-	_cutTail = NO;
-
-	return self;
 }
 
 @end

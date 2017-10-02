@@ -46,20 +46,20 @@
 
 - (NSString *)formattedFromRaw:(NSString *)rawValue
 {
-	NSString * const format = config.format;
+	NSString * const mask = config.mask;
 
-	NSMutableString *formattedValue = [[NSMutableString alloc] initWithCapacity:format.length];
+	NSMutableString *formattedValue = [[NSMutableString alloc] initWithCapacity:mask.length];
 
-	for( NSUInteger indexInFormat = 0, indexInRawValue = 0; indexInFormat < format.length; ++indexInFormat )
+	for( NSUInteger indexInFormat = 0, indexInRawValue = 0; indexInFormat < mask.length; ++indexInFormat )
 	{
 		if( config.cutTail && indexInRawValue == rawValue.length )
 		{
 			break;
 		}
 
-		if( config.maskCharacter != [format characterAtIndex:indexInFormat] || indexInRawValue >= rawValue.length )
+		if( config.maskCharacter != [mask characterAtIndex:indexInFormat] || indexInRawValue >= rawValue.length )
 		{
-			unichar c = [format characterAtIndex:indexInFormat];
+			unichar c = [mask characterAtIndex:indexInFormat];
 			[formattedValue appendString:[FTCTextEntryFormattingStringUtils stringWithCharacter:c]];
 		}
 		else
@@ -122,9 +122,9 @@
 
 	NSUInteger currentPosition = 0;
 
-	for( NSUInteger i = 0; i < config.format.length; ++i )
+	for( NSUInteger i = 0; i < config.mask.length; ++i )
 	{
-		if( config.maskCharacter != [config.format characterAtIndex:i] )
+		if( config.maskCharacter != [config.mask characterAtIndex:i] )
 		{
 			continue;
 		}
@@ -145,13 +145,13 @@
 - (nonnull NSString *)rawValueStringFromFormattedString:(nullable NSString *const)formattedString
                                        inFormattedRange:(const NSRange)range
 {
-	NSString * const format = config.format;
+	NSString * const mask = config.mask;
 
 	NSMutableString *rawString = [[NSMutableString alloc] init];
 
 	for( NSUInteger i = range.location; (i < range.location + range.length) && (i < formattedString.length); ++i )
 	{
-		if ( config.maskCharacter == [format characterAtIndex:i] && config.maskCharacter != [formattedString characterAtIndex:i] )
+		if ( config.maskCharacter == [mask characterAtIndex:i] && config.maskCharacter != [formattedString characterAtIndex:i] )
 		{
 			unichar c = [formattedString characterAtIndex:i];
 			[rawString appendString:[FTCTextEntryFormattingStringUtils stringWithCharacter:c]];
