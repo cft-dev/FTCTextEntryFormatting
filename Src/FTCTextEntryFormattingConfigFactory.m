@@ -17,9 +17,9 @@
 
 @implementation FTCTextEntryFormattingConfigFactory
 
-+ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithFormat:(NSString *)format
++ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask maskChar:(NSString *)maskChar
 {
-	__auto_type maskConfig = [[FTCMaskFormatterGenericConfig alloc] initWithFormat:format];
+	__auto_type maskConfig = [[FTCMaskFormatterGenericConfig alloc] initWithMask:mask maskCharacter:maskChar];
 
 	__auto_type maskFormatter = [[FTCMaskFormatter alloc] initWithConfig:maskConfig];
 	__auto_type inputFilter = [[FTCDigitsValueFilter alloc] initWithMaxLength:maskConfig.countMaskCharacters];
@@ -32,12 +32,6 @@
 	formattingConfig.notEditingFormatter = maskFormatter;
 
 	return formattingConfig;
-}
-
-+ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask
-                                                   maskChar:(unichar)maskChar
-{
-	return [self mobilePhoneConfigWithFormat:[NSString stringWithFormat:@"%c%@", maskChar, mask]];
 }
 
 + (FTCTextEntryFormattingConfig *)moneyConfigWithCurrency:(nullable NSString *)currency onlyIntegral:(BOOL)onlyIntegral

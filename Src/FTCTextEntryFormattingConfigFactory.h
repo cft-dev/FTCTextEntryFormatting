@@ -9,9 +9,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCTextEntryFormattingConfigFactory : NSObject
 
-+ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithFormat:(NSString *)format NS_SWIFT_NAME( mobilePhoneConfig(with:) );
 + (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask
-                                                   maskChar:(unichar)maskChar NS_SWIFT_NAME( mobilePhoneConfig(with:maskChar:) );
+                                                   maskChar:(NSString *)maskChar NS_SWIFT_NAME( mobilePhoneConfig(with:maskChar:) );
 
 + (FTCTextEntryFormattingConfig *)moneyConfigWithCurrency:(nullable NSString *)currency
                                              onlyIntegral:(BOOL)onlyIntegral NS_SWIFT_NAME( moneyConfig(with:onlyIntegral:) );

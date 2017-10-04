@@ -26,15 +26,15 @@
 @synthesize maskCharacter = _maskCharacter;
 @synthesize countMaskCharacters = _countMaskCharacters;
 
-- (instancetype)initWithFormat:(NSString *)format
+- (instancetype)initWithMask:(NSString *)mask maskCharacter:(NSString *)maskCharacter
 {
-	assert( nil != format );
-	assert( format.length > 1 );
+	assert( nil != mask );
+	assert( maskCharacter.length == 1 );
 
 	self = [super init];
 
-	_mask = [format substringFromIndex:1];
-	_maskCharacter = [format characterAtIndex:0];
+	_mask = mask;
+	_maskCharacter = [maskCharacter characterAtIndex:0];
 	_cutTail = NO;
 
 	NSUInteger countMaskCharacters = 0;
