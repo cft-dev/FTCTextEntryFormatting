@@ -17,15 +17,12 @@
 
 @implementation FTCTextEntryFormattingConfigFactory
 
-+ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithFormat:(NSString *)format
-                                                     maskChar:(unichar)maskChar
-                                               maskCharsCount:(NSUInteger)maskCharsCount
++ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask maskChar:(NSString *)maskChar
 {
-	__auto_type maskConfig = [[FTCMaskFormatterGenericConfig alloc] initWithFormat:format];
-	maskConfig.maskCharacter = maskChar;
+	__auto_type maskConfig = [[FTCMaskFormatterGenericConfig alloc] initWithMask:mask maskCharacter:maskChar];
 
 	__auto_type maskFormatter = [[FTCMaskFormatter alloc] initWithConfig:maskConfig];
-	__auto_type inputFilter = [[FTCDigitsValueFilter alloc] initWithMaxLength:maskCharsCount];
+	__auto_type inputFilter = [[FTCDigitsValueFilter alloc] initWithMaxLength:maskConfig.countMaskCharacters];
 
 	__auto_type formattingConfig = [[FTCTextEntryFormattingConfig alloc] init];
 

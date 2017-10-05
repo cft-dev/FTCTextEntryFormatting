@@ -24,10 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCMaskFormatterGenericConfig : NSObject<FTCMaskFormatterConfig>
 
-@property (nonatomic, readwrite) unichar maskCharacter; // default '_'
 @property (nonatomic, readwrite) BOOL cutTail; // default NO
 
-- (instancetype)initWithFormat:(NSString *)format NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithMask:(NSString *)mask maskCharacter:(NSString *)maskCharacter NS_DESIGNATED_INITIALIZER;
 
 - (instancetype)init NS_UNAVAILABLE;
 
