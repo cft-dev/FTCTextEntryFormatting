@@ -59,7 +59,7 @@
 {
 	assert( nil != replacement );
 	assert( isEditing );
-	assert( (nil != editingFormatter) && @"'editingFormatter' must not be nil here." );
+	assert( (nil != editingFormatter) && "'editingFormatter' must not be nil here." );
 
 	NSRange replacementRangeInRawValue = [editingFormatter rangeInRawValueForRange:range inFormattedValue:_formattedValue];
 
@@ -86,7 +86,7 @@
 - (void)beginEditing
 {
 	assert( NO == isEditing );
-	assert( (nil != editingFormatter) && @"'editingFormatter' must not be nil here." );
+	assert( (nil != editingFormatter) && "'editingFormatter' must not be nil here." );
 
 	isEditing = YES;
 
@@ -99,7 +99,7 @@
 	currentSelectionRangeInRawValue = NSMakeRange(_rawValue.length, 0);
 
 	id<FTCTextEntryFormatter> currentFormatter = isEditing ? editingFormatter : notEditingFormatter;
-	assert( (nil != currentFormatter) && @"'currentFormatter' must not be nil here." );
+	assert( (nil != currentFormatter) && "'currentFormatter' must not be nil here." );
 
 	_currentSelectionRangeInFormattedValue = [currentFormatter rangeInFormattedValueForRange:currentSelectionRangeInRawValue inRawValue:_rawValue];
 }
@@ -118,7 +118,7 @@
 - (void)doFormatValue
 {
 	id<FTCTextEntryFormatter> currentFormatter = isEditing ? editingFormatter : notEditingFormatter;
-	assert( (nil != currentFormatter) && @"'currentFormatter' must not be nil here." );
+	assert( (nil != currentFormatter) && "'currentFormatter' must not be nil here." );
 
 	_formattedValue = [currentFormatter formattedFromRaw:(nil != _rawValue ? _rawValue : @"")];
 }
@@ -137,11 +137,11 @@
 
 - (void)applyConfig:(FTCTextEntryFormattingConfig *)config
 {
-	assert( (nil != config) && @"Argument 'config' must not be nil." );
-	assert( (nil != config.editingFormatter) && @"'config.editingFormatter' must not be nil here." );
-	assert( (nil != config.editingInputFilter) && @"'config.editingInputFilter' must not be nil here." );
-	assert( (nil != config.notEditingFormatter) && @"'config.notEditingFormatter' must not be nil here." );
-	assert( (nil != config.notEditingInputFilter) && @"'config.notEditingInputFilter' must not be nil here." );
+	assert( (nil != config) && "Argument 'config' must not be nil." );
+	assert( (nil != config.editingFormatter) && "'config.editingFormatter' must not be nil here." );
+	assert( (nil != config.editingInputFilter) && "'config.editingInputFilter' must not be nil here." );
+	assert( (nil != config.notEditingFormatter) && "'config.notEditingFormatter' must not be nil here." );
+	assert( (nil != config.notEditingInputFilter) && "'config.notEditingInputFilter' must not be nil here." );
 
 	editingFormatter = config.editingFormatter;
 	editingInputFilter = config.editingInputFilter;
@@ -162,7 +162,7 @@
 
 - (nullable NSString *)filterValue:(nullable NSString *)value
 {
-	assert( (nil != notEditingInputFilter) && @"'notEditingInputFilter' must not be nil here." );
+	assert( (nil != notEditingInputFilter) && "'notEditingInputFilter' must not be nil here." );
 
 	if( nil == value )
 	{

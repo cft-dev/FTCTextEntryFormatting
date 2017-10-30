@@ -35,8 +35,8 @@
 
 - (FTCFilteredString *)replaceSubstringInString:(NSString *)originalString atRange:(NSRange)range withString:(NSString *)replacement shouldTrim:(BOOL)shouldTrim
 {
-	assert( (nil != originalString) && @"Argument 'originalString' must not be nil." );
-	assert( (nil != replacement) && @"Argument 'replacement' must not be nil." );
+	assert( (nil != originalString) && "Argument 'originalString' must not be nil." );
+	assert( (nil != replacement) && "Argument 'replacement' must not be nil." );
 
 	NSString *filteredReplacement = [FTCTextEntryFormattingStringUtils stringWithDecimalDigitsFromString:replacement];
 

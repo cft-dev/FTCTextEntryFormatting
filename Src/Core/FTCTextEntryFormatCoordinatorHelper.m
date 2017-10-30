@@ -106,7 +106,7 @@
 	}];
 }
 
-- (void)handleValueChange:(void(^)())valueChange
+- (void)handleValueChange:(void(^)(void))valueChange
 {
 	NSString *initialValue = formatCoordinator.rawValue;
 

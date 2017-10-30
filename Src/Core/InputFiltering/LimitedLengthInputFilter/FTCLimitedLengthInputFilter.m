@@ -28,7 +28,7 @@
 
 - (instancetype)init
 {
-	assert( false && @"Won't happen" );
+	assert( false && "Won't happen" );
 	return nil;
 }
 
@@ -43,7 +43,7 @@
 
 - (NSString *)trimmedString:(NSString *)string
 {
-	assert( nil != string && @"String must not be nil" );
+	assert( nil != string && "String must not be nil" );
 
 	if( string.length > maxLength )
 	{
@@ -55,8 +55,8 @@
 
 - (FTCFilteredString *)replaceSubstringInString:(NSString *)originalString atRange:(NSRange)range withString:(NSString *)replacement
 {
-	assert( (nil != originalString) && @"Argument 'originalString' must not be nil." );
-	assert( (nil != replacement) && @"Argument 'replacement' must not be nil." );
+	assert( (nil != originalString) && "Argument 'originalString' must not be nil." );
+	assert( (nil != replacement) && "Argument 'replacement' must not be nil." );
 
 	NSString *replacedString = [originalString stringByReplacingCharactersInRange:range withString:replacement];;
 

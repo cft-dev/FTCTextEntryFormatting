@@ -24,7 +24,7 @@
 
 - (instancetype)init
 {
-	assert(false && @"Won't happen");
+	assert(false && "Won't happen");
 	return nil;
 }
 
@@ -73,15 +73,14 @@
 
 - (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
 {
-	assert( (rawValue.length >= rangeInRawValue.location + rangeInRawValue.length) && @"Argument 'rangeInRawValue' is out of bounds of 'rawValue'" );
+	assert( (rawValue.length >= rangeInRawValue.location + rangeInRawValue.length) && "Argument 'rangeInRawValue' is out of bounds of 'rawValue'" );
 
 	return rangeInRawValue;
 }
 
 - (NSRange)rangeInRawValueForRange:(NSRange)rangeInFormattedValue inFormattedValue:(NSString *)formattedValue
 {
-	assert( (formattedValue.length >= rangeInFormattedValue.location + rangeInFormattedValue.length) &&
-			@"Argument 'rangeInFormattedValue' is out of bounds of 'formattedValue'" );
+	assert( (formattedValue.length >= rangeInFormattedValue.location + rangeInFormattedValue.length) && "Argument 'rangeInFormattedValue' is out of bounds of 'formattedValue'" );
 
 	NSRange rawRange = rangeInFormattedValue;
 

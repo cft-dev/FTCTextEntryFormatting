@@ -74,7 +74,7 @@
 
 - (NSRange)rangeInFormattedValueForRange:(NSRange)rangeInRawValue inRawValue:(NSString *)rawValue
 {
-	assert( (rawValue.length >= rangeInRawValue.location + rangeInRawValue.length) && @"Argument 'rangeInRawValue' is out of bounds of 'rawValue'" );
+	assert( (rawValue.length >= rangeInRawValue.location + rangeInRawValue.length) && "Argument 'rangeInRawValue' is out of bounds of 'rawValue'" );
 
 	if( 0 == rangeInRawValue.location )
 	{
@@ -171,7 +171,7 @@
 
 - (instancetype)init
 {
-	assert( false && @"Won't happen" );
+	assert( false && "Won't happen" );
 	return nil;
 }
 

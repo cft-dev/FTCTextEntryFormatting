@@ -30,7 +30,7 @@
 
 - (instancetype)init
 {
-	assert(NO && @"Won't happen");
+	assert(NO && "Won't happen");
 	return nil;
 }
 
