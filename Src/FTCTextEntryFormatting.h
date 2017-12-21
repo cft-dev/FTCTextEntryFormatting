@@ -12,6 +12,7 @@
 #import "FTCIntegralMoneyAmountEntryNotEditingInputFilter.h"
 #import "FTCNoFilteringFilter.h"
 #import "FTCTextEntryFormattingConfig.h"
+#import "FTCTextEntryFormattingConfigFactory.h"
 #import "FTCTextEntryNotEditingInputFilter.h"
 #import "FTCTextInputUtils.h"
 #import "FTCDigitsValueFilter.h"

@@ -18,27 +18,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-@protocol FTCTextEntryFormatter;
-@protocol FTCTextEntryEditingInputFilter;
-@protocol FTCTextEntryNotEditingInputFilter;
+#ifndef Bridging_Header_h
+#define Bridging_Header_h
 
-NS_ASSUME_NONNULL_BEGIN
+#import "FTCTextEntryFormatting.h"
 
-@interface FTCTextEntryFormattingConfig : NSObject
-
-@property (nonatomic, strong) id<FTCTextEntryFormatter> editingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryEditingInputFilter> editingInputFilter;
-
-@property (nonatomic, strong) id<FTCTextEntryFormatter> notEditingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryNotEditingInputFilter> notEditingInputFilter;
-
-- (BOOL)isEqualToConfig:(FTCTextEntryFormattingConfig *)config;
-
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
-
-- (instancetype)initWithFormatter:(id<FTCTextEntryFormatter>)formatter
-                      inputFilter:(id<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>)inputFilter;
-
-@end
-
-NS_ASSUME_NONNULL_END
+#endif /* Bridging_Header_h */

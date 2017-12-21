@@ -18,27 +18,9 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-@protocol FTCTextEntryFormatter;
-@protocol FTCTextEntryEditingInputFilter;
-@protocol FTCTextEntryNotEditingInputFilter;
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
 
-NS_ASSUME_NONNULL_BEGIN
+@import Foundation;
 
-@interface FTCTextEntryFormattingConfig : NSObject
-
-@property (nonatomic, strong) id<FTCTextEntryFormatter> editingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryEditingInputFilter> editingInputFilter;
-
-@property (nonatomic, strong) id<FTCTextEntryFormatter> notEditingFormatter;
-@property (nonatomic, strong) id<FTCTextEntryNotEditingInputFilter> notEditingInputFilter;
-
-- (BOOL)isEqualToConfig:(FTCTextEntryFormattingConfig *)config;
-
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
-
-- (instancetype)initWithFormatter:(id<FTCTextEntryFormatter>)formatter
-                      inputFilter:(id<FTCTextEntryEditingInputFilter, FTCTextEntryNotEditingInputFilter>)inputFilter;
-
-@end
-
-NS_ASSUME_NONNULL_END
+#endif /* PrefixHeader_pch */

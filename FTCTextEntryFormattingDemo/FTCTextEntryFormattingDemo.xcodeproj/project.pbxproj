@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B18726CA1F63CC1C003FAF88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B18726C91F63CC1C003FAF88 /* AppDelegate.swift */; };
+		B18726CF1F63CC1C003FAF88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18726CD1F63CC1C003FAF88 /* Main.storyboard */; };
+		B18726D11F63CC1C003FAF88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B18726D01F63CC1C003FAF88 /* Assets.xcassets */; };
+		B18726D41F63CC1C003FAF88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B18726D21F63CC1C003FAF88 /* LaunchScreen.storyboard */; };
+		B187271E1F63DB14003FAF88 /* FTCNoFormattingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726E11F63DB14003FAF88 /* FTCNoFormattingFormatter.m */; };
+		B187271F1F63DB14003FAF88 /* FTCMaskFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726E51F63DB14003FAF88 /* FTCMaskFormatter.m */; };
+		B18727201F63DB14003FAF88 /* FTCMaskFormatterGenericConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726E81F63DB14003FAF88 /* FTCMaskFormatterGenericConfig.m */; };
+		B18727211F63DB14003FAF88 /* FTCPostfixFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726EB1F63DB14003FAF88 /* FTCPostfixFormatter.m */; };
+		B18727221F63DB14003FAF88 /* FTCTextEntryFormatCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726EE1F63DB14003FAF88 /* FTCTextEntryFormatCoordinator.m */; };
+		B18727231F63DB14003FAF88 /* FTCTextEntryFormatCoordinatorHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726F01F63DB14003FAF88 /* FTCTextEntryFormatCoordinatorHelper.m */; };
+		B18727241F63DB14003FAF88 /* FTCTextEntryFormattingConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726F21F63DB14003FAF88 /* FTCTextEntryFormattingConfig.m */; };
+		B18727251F63DB14003FAF88 /* FTCDigitsValueFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726F61F63DB14003FAF88 /* FTCDigitsValueFilter.m */; };
+		B18727261F63DB14003FAF88 /* FTCFilteredString.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726F81F63DB14003FAF88 /* FTCFilteredString.m */; };
+		B18727271F63DB14003FAF88 /* FTCNoFilteringFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726FA1F63DB14003FAF88 /* FTCNoFilteringFilter.m */; };
+		B18727281F63DB14003FAF88 /* FTCLimitedLengthInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18726FF1F63DB14003FAF88 /* FTCLimitedLengthInputFilter.m */; };
+		B18727291F63DB14003FAF88 /* FTCToUpperCaseInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727021F63DB14003FAF88 /* FTCToUpperCaseInputFilter.m */; };
+		B187272A1F63DB14003FAF88 /* FTCTextEntryFormattingConfigFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727051F63DB14003FAF88 /* FTCTextEntryFormattingConfigFactory.m */; };
+		B187272B1F63DB14003FAF88 /* FTCTextFieldFormatCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727071F63DB14003FAF88 /* FTCTextFieldFormatCoordinator.m */; };
+		B187272C1F63DB14003FAF88 /* FTCTextInputUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727091F63DB14003FAF88 /* FTCTextInputUtils.m */; };
+		B187272D1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryEditingInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B187270C1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryEditingInputFilter.m */; };
+		B187272E1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B187270E1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.m */; };
+		B187272F1F63DB14003FAF88 /* FTCMoneyEntryEditingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727101F63DB14003FAF88 /* FTCMoneyEntryEditingFormatter.m */; };
+		B18727301F63DB14003FAF88 /* FTCMoneyEntryEditingInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727121F63DB14003FAF88 /* FTCMoneyEntryEditingInputFilter.m */; };
+		B18727311F63DB14003FAF88 /* FTCMoneyEntryFormatUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727141F63DB14003FAF88 /* FTCMoneyEntryFormatUtils.m */; };
+		B18727321F63DB14003FAF88 /* FTCMoneyEntryNotEditingFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727161F63DB14003FAF88 /* FTCMoneyEntryNotEditingFormatter.m */; };
+		B18727331F63DB14003FAF88 /* FTCMoneyEntryNotEditingInputFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = B18727181F63DB14003FAF88 /* FTCMoneyEntryNotEditingInputFilter.m */; };
+		B18727341F63DB14003FAF88 /* FTCTextEntryFormattingStringUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B187271B1F63DB14003FAF88 /* FTCTextEntryFormattingStringUtils.m */; };
+		B18727351F63DB14003FAF88 /* NSString+FTCTextEntryFormatting.m in Sources */ = {isa = PBXBuildFile; fileRef = B187271D1F63DB14003FAF88 /* NSString+FTCTextEntryFormatting.m */; };
+		B1C7C4031F82668300819CE4 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7C3FF1F82668300819CE4 /* EntryViewController.swift */; };
+		B1C7C4041F82668300819CE4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7C4001F82668300819CE4 /* ViewController.swift */; };
+		B1C7C4051F82668300819CE4 /* FormattingExampleItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C7C4021F82668300819CE4 /* FormattingExampleItem.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B18726C61F63CC1C003FAF88 /* FTCTextEntryFormattingDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTCTextEntryFormattingDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B18726C91F63CC1C003FAF88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B18726CE1F63CC1C003FAF88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B18726D01F63CC1C003FAF88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B18726D31F63CC1C003FAF88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B18726D51F63CC1C003FAF88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B18726E01F63DB14003FAF88 /* FTCNoFormattingFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCNoFormattingFormatter.h; sourceTree = "<group>"; };
+		B18726E11F63DB14003FAF88 /* FTCNoFormattingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCNoFormattingFormatter.m; sourceTree = "<group>"; };
+		B18726E21F63DB14003FAF88 /* FTCTextEntryFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormatter.h; sourceTree = "<group>"; };
+		B18726E41F63DB14003FAF88 /* FTCMaskFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMaskFormatter.h; sourceTree = "<group>"; };
+		B18726E51F63DB14003FAF88 /* FTCMaskFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatter.m; sourceTree = "<group>"; };
+		B18726E61F63DB14003FAF88 /* FTCMaskFormatterConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMaskFormatterConfig.h; sourceTree = "<group>"; };
+		B18726E71F63DB14003FAF88 /* FTCMaskFormatterGenericConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMaskFormatterGenericConfig.h; sourceTree = "<group>"; };
+		B18726E81F63DB14003FAF88 /* FTCMaskFormatterGenericConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMaskFormatterGenericConfig.m; sourceTree = "<group>"; };
+		B18726EA1F63DB14003FAF88 /* FTCPostfixFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCPostfixFormatter.h; sourceTree = "<group>"; };
+		B18726EB1F63DB14003FAF88 /* FTCPostfixFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCPostfixFormatter.m; sourceTree = "<group>"; };
+		B18726EC1F63DB14003FAF88 /* FTCTextEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntry.h; sourceTree = "<group>"; };
+		B18726ED1F63DB14003FAF88 /* FTCTextEntryFormatCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormatCoordinator.h; sourceTree = "<group>"; };
+		B18726EE1F63DB14003FAF88 /* FTCTextEntryFormatCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextEntryFormatCoordinator.m; sourceTree = "<group>"; };
+		B18726EF1F63DB14003FAF88 /* FTCTextEntryFormatCoordinatorHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormatCoordinatorHelper.h; sourceTree = "<group>"; };
+		B18726F01F63DB14003FAF88 /* FTCTextEntryFormatCoordinatorHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextEntryFormatCoordinatorHelper.m; sourceTree = "<group>"; };
+		B18726F11F63DB14003FAF88 /* FTCTextEntryFormattingConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormattingConfig.h; sourceTree = "<group>"; };
+		B18726F21F63DB14003FAF88 /* FTCTextEntryFormattingConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextEntryFormattingConfig.m; sourceTree = "<group>"; };
+		B18726F51F63DB14003FAF88 /* FTCDigitsValueFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCDigitsValueFilter.h; sourceTree = "<group>"; };
+		B18726F61F63DB14003FAF88 /* FTCDigitsValueFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCDigitsValueFilter.m; sourceTree = "<group>"; };
+		B18726F71F63DB14003FAF88 /* FTCFilteredString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCFilteredString.h; sourceTree = "<group>"; };
+		B18726F81F63DB14003FAF88 /* FTCFilteredString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCFilteredString.m; sourceTree = "<group>"; };
+		B18726F91F63DB14003FAF88 /* FTCNoFilteringFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCNoFilteringFilter.h; sourceTree = "<group>"; };
+		B18726FA1F63DB14003FAF88 /* FTCNoFilteringFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCNoFilteringFilter.m; sourceTree = "<group>"; };
+		B18726FB1F63DB14003FAF88 /* FTCTextEntryEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryEditingInputFilter.h; sourceTree = "<group>"; };
+		B18726FC1F63DB14003FAF88 /* FTCTextEntryNotEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryNotEditingInputFilter.h; sourceTree = "<group>"; };
+		B18726FE1F63DB14003FAF88 /* FTCLimitedLengthInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCLimitedLengthInputFilter.h; sourceTree = "<group>"; };
+		B18726FF1F63DB14003FAF88 /* FTCLimitedLengthInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCLimitedLengthInputFilter.m; sourceTree = "<group>"; };
+		B18727011F63DB14003FAF88 /* FTCToUpperCaseInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCToUpperCaseInputFilter.h; sourceTree = "<group>"; };
+		B18727021F63DB14003FAF88 /* FTCToUpperCaseInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCToUpperCaseInputFilter.m; sourceTree = "<group>"; };
+		B18727031F63DB14003FAF88 /* FTCTextEntryFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormatting.h; sourceTree = "<group>"; };
+		B18727041F63DB14003FAF88 /* FTCTextEntryFormattingConfigFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormattingConfigFactory.h; sourceTree = "<group>"; };
+		B18727051F63DB14003FAF88 /* FTCTextEntryFormattingConfigFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextEntryFormattingConfigFactory.m; sourceTree = "<group>"; };
+		B18727061F63DB14003FAF88 /* FTCTextFieldFormatCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextFieldFormatCoordinator.h; sourceTree = "<group>"; };
+		B18727071F63DB14003FAF88 /* FTCTextFieldFormatCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextFieldFormatCoordinator.m; sourceTree = "<group>"; };
+		B18727081F63DB14003FAF88 /* FTCTextInputUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextInputUtils.h; sourceTree = "<group>"; };
+		B18727091F63DB14003FAF88 /* FTCTextInputUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextInputUtils.m; sourceTree = "<group>"; };
+		B187270B1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCIntegralMoneyAmountEntryEditingInputFilter.h; sourceTree = "<group>"; };
+		B187270C1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryEditingInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCIntegralMoneyAmountEntryEditingInputFilter.m; sourceTree = "<group>"; };
+		B187270D1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCIntegralMoneyAmountEntryNotEditingInputFilter.h; sourceTree = "<group>"; };
+		B187270E1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCIntegralMoneyAmountEntryNotEditingInputFilter.m; sourceTree = "<group>"; };
+		B187270F1F63DB14003FAF88 /* FTCMoneyEntryEditingFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMoneyEntryEditingFormatter.h; sourceTree = "<group>"; };
+		B18727101F63DB14003FAF88 /* FTCMoneyEntryEditingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMoneyEntryEditingFormatter.m; sourceTree = "<group>"; };
+		B18727111F63DB14003FAF88 /* FTCMoneyEntryEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMoneyEntryEditingInputFilter.h; sourceTree = "<group>"; };
+		B18727121F63DB14003FAF88 /* FTCMoneyEntryEditingInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMoneyEntryEditingInputFilter.m; sourceTree = "<group>"; };
+		B18727131F63DB14003FAF88 /* FTCMoneyEntryFormatUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMoneyEntryFormatUtils.h; sourceTree = "<group>"; };
+		B18727141F63DB14003FAF88 /* FTCMoneyEntryFormatUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMoneyEntryFormatUtils.m; sourceTree = "<group>"; };
+		B18727151F63DB14003FAF88 /* FTCMoneyEntryNotEditingFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMoneyEntryNotEditingFormatter.h; sourceTree = "<group>"; };
+		B18727161F63DB14003FAF88 /* FTCMoneyEntryNotEditingFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMoneyEntryNotEditingFormatter.m; sourceTree = "<group>"; };
+		B18727171F63DB14003FAF88 /* FTCMoneyEntryNotEditingInputFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMoneyEntryNotEditingInputFilter.h; sourceTree = "<group>"; };
+		B18727181F63DB14003FAF88 /* FTCMoneyEntryNotEditingInputFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMoneyEntryNotEditingInputFilter.m; sourceTree = "<group>"; };
+		B187271A1F63DB14003FAF88 /* FTCTextEntryFormattingStringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCTextEntryFormattingStringUtils.h; sourceTree = "<group>"; };
+		B187271B1F63DB14003FAF88 /* FTCTextEntryFormattingStringUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCTextEntryFormattingStringUtils.m; sourceTree = "<group>"; };
+		B187271C1F63DB14003FAF88 /* NSString+FTCTextEntryFormatting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FTCTextEntryFormatting.h"; sourceTree = "<group>"; };
+		B187271D1F63DB14003FAF88 /* NSString+FTCTextEntryFormatting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FTCTextEntryFormatting.m"; sourceTree = "<group>"; };
+		B18727361F63DB5F003FAF88 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		B187273A1F63DCEE003FAF88 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		B1C7C3FF1F82668300819CE4 /* EntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		B1C7C4001F82668300819CE4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B1C7C4021F82668300819CE4 /* FormattingExampleItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormattingExampleItem.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B18726C31F63CC1C003FAF88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B18726BD1F63CC1C003FAF88 = {
+			isa = PBXGroup;
+			children = (
+				B18726DD1F63DB14003FAF88 /* Src */,
+				B18726C81F63CC1C003FAF88 /* FTCTextEntryFormattingDemo */,
+				B18726C71F63CC1C003FAF88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B18726C71F63CC1C003FAF88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B18726C61F63CC1C003FAF88 /* FTCTextEntryFormattingDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B18726C81F63CC1C003FAF88 /* FTCTextEntryFormattingDemo */ = {
+			isa = PBXGroup;
+			children = (
+				B1C7C3FE1F82668300819CE4 /* Screens */,
+				B1C7C4011F82668300819CE4 /* Data */,
+				B18726C91F63CC1C003FAF88 /* AppDelegate.swift */,
+				B18726CD1F63CC1C003FAF88 /* Main.storyboard */,
+				B18726D01F63CC1C003FAF88 /* Assets.xcassets */,
+				B18726D21F63CC1C003FAF88 /* LaunchScreen.storyboard */,
+				B18726D51F63CC1C003FAF88 /* Info.plist */,
+				B18727361F63DB5F003FAF88 /* PrefixHeader.pch */,
+				B187273A1F63DCEE003FAF88 /* Bridging-Header.h */,
+			);
+			path = FTCTextEntryFormattingDemo;
+			sourceTree = "<group>";
+		};
+		B18726DD1F63DB14003FAF88 /* Src */ = {
+			isa = PBXGroup;
+			children = (
+				B18726DE1F63DB14003FAF88 /* Core */,
+				B18727031F63DB14003FAF88 /* FTCTextEntryFormatting.h */,
+				B18727041F63DB14003FAF88 /* FTCTextEntryFormattingConfigFactory.h */,
+				B18727051F63DB14003FAF88 /* FTCTextEntryFormattingConfigFactory.m */,
+				B18727061F63DB14003FAF88 /* FTCTextFieldFormatCoordinator.h */,
+				B18727071F63DB14003FAF88 /* FTCTextFieldFormatCoordinator.m */,
+				B18727081F63DB14003FAF88 /* FTCTextInputUtils.h */,
+				B18727091F63DB14003FAF88 /* FTCTextInputUtils.m */,
+				B187270A1F63DB14003FAF88 /* Money */,
+				B18727191F63DB14003FAF88 /* Tools */,
+			);
+			name = Src;
+			path = ../Src;
+			sourceTree = "<group>";
+		};
+		B18726DE1F63DB14003FAF88 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B18726DF1F63DB14003FAF88 /* Formatting */,
+				B18726EC1F63DB14003FAF88 /* FTCTextEntry.h */,
+				B18726ED1F63DB14003FAF88 /* FTCTextEntryFormatCoordinator.h */,
+				B18726EE1F63DB14003FAF88 /* FTCTextEntryFormatCoordinator.m */,
+				B18726EF1F63DB14003FAF88 /* FTCTextEntryFormatCoordinatorHelper.h */,
+				B18726F01F63DB14003FAF88 /* FTCTextEntryFormatCoordinatorHelper.m */,
+				B18726F11F63DB14003FAF88 /* FTCTextEntryFormattingConfig.h */,
+				B18726F21F63DB14003FAF88 /* FTCTextEntryFormattingConfig.m */,
+				B18726F31F63DB14003FAF88 /* InputFiltering */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B18726DF1F63DB14003FAF88 /* Formatting */ = {
+			isa = PBXGroup;
+			children = (
+				B18726E01F63DB14003FAF88 /* FTCNoFormattingFormatter.h */,
+				B18726E11F63DB14003FAF88 /* FTCNoFormattingFormatter.m */,
+				B18726E21F63DB14003FAF88 /* FTCTextEntryFormatter.h */,
+				B18726E31F63DB14003FAF88 /* MaskFormatter */,
+				B18726E91F63DB14003FAF88 /* PostfixFormatter */,
+			);
+			path = Formatting;
+			sourceTree = "<group>";
+		};
+		B18726E31F63DB14003FAF88 /* MaskFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				B18726E41F63DB14003FAF88 /* FTCMaskFormatter.h */,
+				B18726E51F63DB14003FAF88 /* FTCMaskFormatter.m */,
+				B18726E61F63DB14003FAF88 /* FTCMaskFormatterConfig.h */,
+				B18726E71F63DB14003FAF88 /* FTCMaskFormatterGenericConfig.h */,
+				B18726E81F63DB14003FAF88 /* FTCMaskFormatterGenericConfig.m */,
+			);
+			path = MaskFormatter;
+			sourceTree = "<group>";
+		};
+		B18726E91F63DB14003FAF88 /* PostfixFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				B18726EA1F63DB14003FAF88 /* FTCPostfixFormatter.h */,
+				B18726EB1F63DB14003FAF88 /* FTCPostfixFormatter.m */,
+			);
+			path = PostfixFormatter;
+			sourceTree = "<group>";
+		};
+		B18726F31F63DB14003FAF88 /* InputFiltering */ = {
+			isa = PBXGroup;
+			children = (
+				B18726F41F63DB14003FAF88 /* DigitsValueFilter */,
+				B18726F71F63DB14003FAF88 /* FTCFilteredString.h */,
+				B18726F81F63DB14003FAF88 /* FTCFilteredString.m */,
+				B18726F91F63DB14003FAF88 /* FTCNoFilteringFilter.h */,
+				B18726FA1F63DB14003FAF88 /* FTCNoFilteringFilter.m */,
+				B18726FB1F63DB14003FAF88 /* FTCTextEntryEditingInputFilter.h */,
+				B18726FC1F63DB14003FAF88 /* FTCTextEntryNotEditingInputFilter.h */,
+				B18726FD1F63DB14003FAF88 /* LimitedLengthInputFilter */,
+				B18727001F63DB14003FAF88 /* ToUpperCaseInputFilter */,
+			);
+			path = InputFiltering;
+			sourceTree = "<group>";
+		};
+		B18726F41F63DB14003FAF88 /* DigitsValueFilter */ = {
+			isa = PBXGroup;
+			children = (
+				B18726F51F63DB14003FAF88 /* FTCDigitsValueFilter.h */,
+				B18726F61F63DB14003FAF88 /* FTCDigitsValueFilter.m */,
+			);
+			path = DigitsValueFilter;
+			sourceTree = "<group>";
+		};
+		B18726FD1F63DB14003FAF88 /* LimitedLengthInputFilter */ = {
+			isa = PBXGroup;
+			children = (
+				B18726FE1F63DB14003FAF88 /* FTCLimitedLengthInputFilter.h */,
+				B18726FF1F63DB14003FAF88 /* FTCLimitedLengthInputFilter.m */,
+			);
+			path = LimitedLengthInputFilter;
+			sourceTree = "<group>";
+		};
+		B18727001F63DB14003FAF88 /* ToUpperCaseInputFilter */ = {
+			isa = PBXGroup;
+			children = (
+				B18727011F63DB14003FAF88 /* FTCToUpperCaseInputFilter.h */,
+				B18727021F63DB14003FAF88 /* FTCToUpperCaseInputFilter.m */,
+			);
+			path = ToUpperCaseInputFilter;
+			sourceTree = "<group>";
+		};
+		B187270A1F63DB14003FAF88 /* Money */ = {
+			isa = PBXGroup;
+			children = (
+				B187270B1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryEditingInputFilter.h */,
+				B187270C1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryEditingInputFilter.m */,
+				B187270D1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.h */,
+				B187270E1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.m */,
+				B187270F1F63DB14003FAF88 /* FTCMoneyEntryEditingFormatter.h */,
+				B18727101F63DB14003FAF88 /* FTCMoneyEntryEditingFormatter.m */,
+				B18727111F63DB14003FAF88 /* FTCMoneyEntryEditingInputFilter.h */,
+				B18727121F63DB14003FAF88 /* FTCMoneyEntryEditingInputFilter.m */,
+				B18727131F63DB14003FAF88 /* FTCMoneyEntryFormatUtils.h */,
+				B18727141F63DB14003FAF88 /* FTCMoneyEntryFormatUtils.m */,
+				B18727151F63DB14003FAF88 /* FTCMoneyEntryNotEditingFormatter.h */,
+				B18727161F63DB14003FAF88 /* FTCMoneyEntryNotEditingFormatter.m */,
+				B18727171F63DB14003FAF88 /* FTCMoneyEntryNotEditingInputFilter.h */,
+				B18727181F63DB14003FAF88 /* FTCMoneyEntryNotEditingInputFilter.m */,
+			);
+			path = Money;
+			sourceTree = "<group>";
+		};
+		B18727191F63DB14003FAF88 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B187271A1F63DB14003FAF88 /* FTCTextEntryFormattingStringUtils.h */,
+				B187271B1F63DB14003FAF88 /* FTCTextEntryFormattingStringUtils.m */,
+				B187271C1F63DB14003FAF88 /* NSString+FTCTextEntryFormatting.h */,
+				B187271D1F63DB14003FAF88 /* NSString+FTCTextEntryFormatting.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B1C7C3FE1F82668300819CE4 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B1C7C3FF1F82668300819CE4 /* EntryViewController.swift */,
+				B1C7C4001F82668300819CE4 /* ViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B1C7C4011F82668300819CE4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B1C7C4021F82668300819CE4 /* FormattingExampleItem.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B18726C51F63CC1C003FAF88 /* FTCTextEntryFormattingDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B18726D81F63CC1C003FAF88 /* Build configuration list for PBXNativeTarget "FTCTextEntryFormattingDemo" */;
+			buildPhases = (
+				B18726C21F63CC1C003FAF88 /* Sources */,
+				B18726C31F63CC1C003FAF88 /* Frameworks */,
+				B18726C41F63CC1C003FAF88 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTCTextEntryFormattingDemo;
+			productName = FTCTextEntryFormattingDemo;
+			productReference = B18726C61F63CC1C003FAF88 /* FTCTextEntryFormattingDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B18726BE1F63CC1C003FAF88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = FTC;
+				TargetAttributes = {
+					B18726C51F63CC1C003FAF88 = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B18726C11F63CC1C003FAF88 /* Build configuration list for PBXProject "FTCTextEntryFormattingDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B18726BD1F63CC1C003FAF88;
+			productRefGroup = B18726C71F63CC1C003FAF88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B18726C51F63CC1C003FAF88 /* FTCTextEntryFormattingDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B18726C41F63CC1C003FAF88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B18726D41F63CC1C003FAF88 /* LaunchScreen.storyboard in Resources */,
+				B18726D11F63CC1C003FAF88 /* Assets.xcassets in Resources */,
+				B18726CF1F63CC1C003FAF88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B18726C21F63CC1C003FAF88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1C7C4051F82668300819CE4 /* FormattingExampleItem.swift in Sources */,
+				B18727201F63DB14003FAF88 /* FTCMaskFormatterGenericConfig.m in Sources */,
+				B18727321F63DB14003FAF88 /* FTCMoneyEntryNotEditingFormatter.m in Sources */,
+				B187272E1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryNotEditingInputFilter.m in Sources */,
+				B18727311F63DB14003FAF88 /* FTCMoneyEntryFormatUtils.m in Sources */,
+				B18727261F63DB14003FAF88 /* FTCFilteredString.m in Sources */,
+				B1C7C4031F82668300819CE4 /* EntryViewController.swift in Sources */,
+				B18727271F63DB14003FAF88 /* FTCNoFilteringFilter.m in Sources */,
+				B18727301F63DB14003FAF88 /* FTCMoneyEntryEditingInputFilter.m in Sources */,
+				B187272D1F63DB14003FAF88 /* FTCIntegralMoneyAmountEntryEditingInputFilter.m in Sources */,
+				B18727251F63DB14003FAF88 /* FTCDigitsValueFilter.m in Sources */,
+				B187272C1F63DB14003FAF88 /* FTCTextInputUtils.m in Sources */,
+				B18727291F63DB14003FAF88 /* FTCToUpperCaseInputFilter.m in Sources */,
+				B18727281F63DB14003FAF88 /* FTCLimitedLengthInputFilter.m in Sources */,
+				B187272F1F63DB14003FAF88 /* FTCMoneyEntryEditingFormatter.m in Sources */,
+				B18726CA1F63CC1C003FAF88 /* AppDelegate.swift in Sources */,
+				B18727221F63DB14003FAF88 /* FTCTextEntryFormatCoordinator.m in Sources */,
+				B18727241F63DB14003FAF88 /* FTCTextEntryFormattingConfig.m in Sources */,
+				B18727231F63DB14003FAF88 /* FTCTextEntryFormatCoordinatorHelper.m in Sources */,
+				B187271E1F63DB14003FAF88 /* FTCNoFormattingFormatter.m in Sources */,
+				B187272A1F63DB14003FAF88 /* FTCTextEntryFormattingConfigFactory.m in Sources */,
+				B18727341F63DB14003FAF88 /* FTCTextEntryFormattingStringUtils.m in Sources */,
+				B1C7C4041F82668300819CE4 /* ViewController.swift in Sources */,
+				B18727211F63DB14003FAF88 /* FTCPostfixFormatter.m in Sources */,
+				B187272B1F63DB14003FAF88 /* FTCTextFieldFormatCoordinator.m in Sources */,
+				B187271F1F63DB14003FAF88 /* FTCMaskFormatter.m in Sources */,
+				B18727331F63DB14003FAF88 /* FTCMoneyEntryNotEditingInputFilter.m in Sources */,
+				B18727351F63DB14003FAF88 /* NSString+FTCTextEntryFormatting.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B18726CD1F63CC1C003FAF88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18726CE1F63CC1C003FAF88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B18726D21F63CC1C003FAF88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B18726D31F63CC1C003FAF88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B18726D61F63CC1C003FAF88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B18726D71F63CC1C003FAF88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B18726D91F63CC1C003FAF88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = FTCTextEntryFormattingDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = FTCTextEntryFormattingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FTC.FTCTextEntryFormattingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FTCTextEntryFormattingDemo/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B18726DA1F63CC1C003FAF88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = FTCTextEntryFormattingDemo/PrefixHeader.pch;
+				INFOPLIST_FILE = FTCTextEntryFormattingDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = FTC.FTCTextEntryFormattingDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FTCTextEntryFormattingDemo/Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B18726C11F63CC1C003FAF88 /* Build configuration list for PBXProject "FTCTextEntryFormattingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B18726D61F63CC1C003FAF88 /* Debug */,
+				B18726D71F63CC1C003FAF88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B18726D81F63CC1C003FAF88 /* Build configuration list for PBXNativeTarget "FTCTextEntryFormattingDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B18726D91F63CC1C003FAF88 /* Debug */,
+				B18726DA1F63CC1C003FAF88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B18726BE1F63CC1C003FAF88 /* Project object */;
+}
