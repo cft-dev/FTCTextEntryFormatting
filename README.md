@@ -120,8 +120,11 @@ class EntryViewController: UIViewController
 ### Generic input filters
 
 FTCDigitsValueFilter – Allows only digits symbols.
+
 FTCNoFilteringFilter – Allows any symbol.
+
 FTCLimitedLengthInputFilter – Allows any symbol. Constraining input by length.
+
 FTCToUpperCaseInputFilter – Allows any symbol. Turns case to upper.
 
 ### License
