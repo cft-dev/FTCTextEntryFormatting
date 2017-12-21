@@ -5,7 +5,7 @@
 ### Installation
 
 ```ruby
-pod "FTCTextEntryFormatting"
+pod 'FTCTextEntryFormatting', :git => 'https://github.com/cft-dev/FTCTextEntryFormatting.git', :tag => '1.0.3'
 ```
 
 ### Standalone usage
