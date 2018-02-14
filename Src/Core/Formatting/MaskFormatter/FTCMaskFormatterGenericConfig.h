@@ -24,7 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface FTCMaskFormatterGenericConfig : NSObject<FTCMaskFormatterConfig>
 
-@property (nonatomic, readwrite) BOOL cutTail; // default NO
+@property (nonatomic, readwrite) FTCMaskFormatterConfigTailMode tailMode; // default FTCMaskFormatterConfigTailModeNone
 
 - (instancetype)initWithMask:(NSString *)mask maskCharacter:(NSString *)maskCharacter NS_DESIGNATED_INITIALIZER;
 

@@ -18,6 +18,8 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
+#import "FTCTextEntryFormatting.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 @class FTCTextEntryFormattingConfig;
@@ -26,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask
                                                    maskChar:(NSString *)maskChar NS_SWIFT_NAME( mobilePhoneConfig(with:maskChar:) );
++ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask
+                                                   maskChar:(NSString *)maskChar
+                                                   tailMode:(FTCMaskFormatterConfigTailMode)tailMode NS_SWIFT_NAME( mobilePhoneConfig(with:maskChar:tailMode:) );
 
 + (FTCTextEntryFormattingConfig *)moneyConfigWithCurrency:(nullable NSString *)currency
                                              onlyIntegral:(BOOL)onlyIntegral NS_SWIFT_NAME( moneyConfig(with:onlyIntegral:) );
