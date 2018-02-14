@@ -79,40 +79,40 @@
 
 - (void)beginEditing
 {
-	[self handleValueChange:^
+	[self handleValueChange:^(FTCTextEntryFormatCoordinator *coordinator, id<FTCTextEntry> entry)
 	{
-		[formatCoordinator beginEditing];
-		entryUI.text = formatCoordinator.formattedValue;
-		entryUI.selectedTextRange = formatCoordinator.currentSelectionRangeInFormattedValue;
+		[coordinator beginEditing];
+		entry.text = coordinator.formattedValue;
+		entry.selectedTextRange = coordinator.currentSelectionRangeInFormattedValue;
 	}];
 }
 
 - (void)changeCharactersInRange:(NSRange)range replacement:(NSString *)replacement
 {
-	[self handleValueChange:^
+	[self handleValueChange:^(FTCTextEntryFormatCoordinator *coordinator, id<FTCTextEntry> entry)
 	{
-		[formatCoordinator userReplacedInFormattedValueSubstringAtRange:range withString:replacement];
-		entryUI.text = formatCoordinator.formattedValue;
-		entryUI.selectedTextRange = formatCoordinator.currentSelectionRangeInFormattedValue;
+		[coordinator userReplacedInFormattedValueSubstringAtRange:range withString:replacement];
+		entry.text = coordinator.formattedValue;
+		entry.selectedTextRange = coordinator.currentSelectionRangeInFormattedValue;
 	}];
 }
 
 - (void)endEditing
 {
-	[self handleValueChange:^
+	[self handleValueChange:^(FTCTextEntryFormatCoordinator *coordinator, id<FTCTextEntry> entry)
 	{
-		[formatCoordinator endEditing];
-		entryUI.text = formatCoordinator.formattedValue;
+		[coordinator endEditing];
+		entry.text = coordinator.formattedValue;
 	}];
 }
 
-- (void)handleValueChange:(void(^)(void))valueChange
+- (void)handleValueChange:(void(^)(FTCTextEntryFormatCoordinator *coordinator, id<FTCTextEntry> entry))valueChange
 {
 	NSString *initialValue = formatCoordinator.rawValue;
 
 	if( NULL != valueChange )
 	{
-		valueChange();
+		valueChange(formatCoordinator, entryUI);
 	}
 
 	if( NULL == _didChangeValueHandler )

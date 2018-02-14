@@ -48,11 +48,18 @@
 {
 	NSString * const mask = config.mask;
 
+	if( (FTCMaskFormatterConfigTailModeCutAndForceHead == config.tailMode) && (rawValue.length == 0) )
+	{
+		NSString *maskCharacterString = [FTCTextEntryFormattingStringUtils stringWithCharacter:config.maskCharacter];
+		return [config.mask substringToIndex:[config.mask rangeOfString:maskCharacterString].location];
+	}
+
 	NSMutableString *formattedValue = [[NSMutableString alloc] initWithCapacity:mask.length];
 
 	for( NSUInteger indexInFormat = 0, indexInRawValue = 0; indexInFormat < mask.length; ++indexInFormat )
 	{
-		if( config.cutTail && indexInRawValue == rawValue.length )
+		if( ((FTCMaskFormatterConfigTailModeCutAndForceHead == config.tailMode) || (FTCMaskFormatterConfigTailModeCut == config.tailMode))
+				&& indexInRawValue == rawValue.length )
 		{
 			break;
 		}

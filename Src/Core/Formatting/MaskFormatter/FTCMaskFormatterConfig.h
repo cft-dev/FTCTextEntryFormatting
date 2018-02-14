@@ -20,12 +20,19 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, FTCMaskFormatterConfigTailMode)
+{
+    FTCMaskFormatterConfigTailModeNone = 0,
+    FTCMaskFormatterConfigTailModeCut,
+    FTCMaskFormatterConfigTailModeCutAndForceHead
+};
+
 @protocol FTCMaskFormatterConfig<NSObject>
 
 @property (nonatomic, readonly) NSString *mask;
 @property (nonatomic, readonly) unichar maskCharacter;
 @property (nonatomic, readonly) NSUInteger countMaskCharacters;
-@property (nonatomic, readonly) BOOL cutTail;
+@property (nonatomic, readonly) FTCMaskFormatterConfigTailMode tailMode;
 
 @end
 

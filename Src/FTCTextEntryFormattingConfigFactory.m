@@ -34,13 +34,25 @@
 
 + (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask maskChar:(NSString *)maskChar
 {
+	return [self mobilePhoneConfigWithMask:mask maskChar:maskChar tailMode:FTCMaskFormatterConfigTailModeNone];
+}
+
++ (FTCTextEntryFormattingConfig *)mobilePhoneConfigWithMask:(NSString *)mask maskChar:(NSString *)maskChar tailMode:(FTCMaskFormatterConfigTailMode)tailMode
+{
 	__auto_type maskConfig = [[FTCMaskFormatterGenericConfig alloc] initWithMask:mask maskCharacter:maskChar];
+	maskConfig.tailMode = tailMode;
 
 	__auto_type maskFormatter = [[FTCMaskFormatter alloc] initWithConfig:maskConfig];
 	__auto_type inputFilter = [[FTCDigitsValueFilter alloc] initWithMaxLength:maskConfig.countMaskCharacters];
 
-	return [[FTCTextEntryFormattingConfig alloc] initWithFormatter:maskFormatter
-													   inputFilter:inputFilter];
+	__auto_type formattingConfig = [[FTCTextEntryFormattingConfig alloc] init];
+
+	formattingConfig.editingInputFilter = inputFilter;
+	formattingConfig.editingFormatter = maskFormatter;
+	formattingConfig.notEditingInputFilter = inputFilter;
+	formattingConfig.notEditingFormatter = maskFormatter;
+
+	return formattingConfig;
 }
 
 + (FTCTextEntryFormattingConfig *)moneyConfigWithCurrency:(nullable NSString *)currency onlyIntegral:(BOOL)onlyIntegral

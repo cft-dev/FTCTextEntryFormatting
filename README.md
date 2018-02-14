@@ -28,7 +28,7 @@ class EntryViewController: UIViewController
 
 		self.textFieldFormatCoordinator = FTCTextFieldFormatCoordinator(textField: self.textField)
 
-		let formattingConfig = FTCTextEntryFormattingConfigFactory.mobilePhoneConfig(withFormat: "+7 (___) ___-__-__",
+		let formattingConfig = FTCTextEntryFormattingConfigFactory.mobilePhoneConfig(with: "+7 (___) ___-__-__",
 		                                                                             maskChar: "_")
 		self.textFieldFormatCoordinator.apply(formattingConfig: formattingConfig)
 	}

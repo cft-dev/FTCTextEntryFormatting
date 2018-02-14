@@ -35,7 +35,7 @@
 
 	_mask = mask;
 	_maskCharacter = [maskCharacter characterAtIndex:0];
-	_cutTail = NO;
+	_tailMode = FTCMaskFormatterConfigTailModeNone;
 
 	NSUInteger countMaskCharacters = 0;
 	for( NSUInteger i = 0; i < _mask.length; ++i )
