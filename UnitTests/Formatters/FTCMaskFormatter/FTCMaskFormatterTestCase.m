@@ -36,12 +36,12 @@
 	[super setUp];
 	
 	FTCMaskFormatterGenericConfig *configWithCutTail = [[FTCMaskFormatterGenericConfig alloc] initWithMask:@"_ _ _ _ _" maskCharacter:@"_"];
-	configWithCutTail.cutTail = YES;
+	configWithCutTail.tailMode = FTCMaskFormatterConfigTailModeCut;
 
 	formatterWithCutTail = [[FTCMaskFormatter alloc] initWithConfig:configWithCutTail];
 
 	FTCMaskFormatterGenericConfig *configWithoutCutTail = [[FTCMaskFormatterGenericConfig alloc] initWithMask:@"_ _ _ _ _" maskCharacter:@"_"];
-	configWithoutCutTail.cutTail = NO;
+	configWithoutCutTail.tailMode = FTCMaskFormatterConfigTailModeNone;
 
 	formatterWithoutCutTail = [[FTCMaskFormatter alloc] initWithConfig:configWithoutCutTail];
 }
