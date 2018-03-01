@@ -63,7 +63,7 @@ extension FormattingExampleItem
 	static func makeCreditCardPANItem() -> FormattingExampleItem
 	{
 		let maskConfig = FTCMaskFormatterGenericConfig(mask: "XXXX XXXX XXXX XXXX XXX", maskCharacter: "X")
-		maskConfig.cutTail = true
+		maskConfig.tailMode = .cut
 
 		let maskFormatter = FTCMaskFormatter(config: maskConfig)
 		let inputFilter = FTCDigitsValueFilter(maxLength: maskConfig.countMaskCharacters)
@@ -79,7 +79,7 @@ extension FormattingExampleItem
 	static func makeDriverLicenseModernItem() -> FormattingExampleItem
 	{
 		let maskConfig = FTCMaskFormatterGenericConfig(mask: "__ __ ______", maskCharacter: "_")
-		maskConfig.cutTail = false
+		maskConfig.tailMode = .none
 
 		let maskFormatter = FTCMaskFormatter(config: maskConfig)
 		let inputFilter = FTCDigitsValueFilter(maxLength: maskConfig.countMaskCharacters)
@@ -95,7 +95,7 @@ extension FormattingExampleItem
 	static func makeDriverLicenseOutdatedItem() -> FormattingExampleItem
 	{
 		let maskConfig = FTCMaskFormatterGenericConfig(mask: "__ __ № ______", maskCharacter: "_")
-		maskConfig.cutTail = false
+		maskConfig.tailMode = .none
 
 		let maskFormatter = FTCMaskFormatter(config: maskConfig)
 		let inputFilter = FTCToUpperCaseInputFilter()

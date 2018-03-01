@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		21591A1641163D3E4D1A1F34 /* FTCDigitsInputFilterTestCaseWithZeroMaxLength.m in Sources */ = {isa = PBXBuildFile; fileRef = F515E4501F5D58CD00AEEC8C /* FTCDigitsInputFilterTestCaseWithZeroMaxLength.m */; };
 		B10523501F84C4B6002B3F61 /* FTCDigitsInputFilterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = B105234E1F84C497002B3F61 /* FTCDigitsInputFilterTestCase.m */; };
-		B10523531F84C655002B3F61 /* FTCTextEntryFormattingConfigFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B10523511F84C655002B3F61 /* FTCTextEntryFormattingConfigFactory.h */; };
+		B10523531F84C655002B3F61 /* FTCTextEntryFormattingConfigFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = B10523511F84C655002B3F61 /* FTCTextEntryFormattingConfigFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B10523541F84C655002B3F61 /* FTCTextEntryFormattingConfigFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = B10523521F84C655002B3F61 /* FTCTextEntryFormattingConfigFactory.m */; };
 		B1EBF8E71F2315F90014F4CB /* FTCTextEntryFormatting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EBF8DD1F2315F90014F4CB /* FTCTextEntryFormatting.framework */; };
 		B1EBF9441F2316410014F4CB /* FTCNoFormattingFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = B1EBF9001F2316410014F4CB /* FTCNoFormattingFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
